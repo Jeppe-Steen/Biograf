@@ -1,0 +1,149 @@
+nav {
+  width: 100%;
+  height: 15%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 9000;
+}
+
+@media (min-width: 1200px) {
+  nav {
+    width: 100%;
+    height: 10%;
+  }
+}
+
+nav #logo {
+  position: absolute;
+  left: 10%;
+  height: 70%;
+}
+
+@media (min-width: 1200px) {
+  nav #logo {
+    left: 5%;
+    height: 90%;
+  }
+}
+
+nav #burgerBar {
+  position: absolute;
+  color: white;
+  z-index: 9500;
+  font-size: 2em;
+  right: 10%;
+}
+
+@media (min-width: 1200px) {
+  nav #burgerBar {
+    font-size: 3em;
+    right: 5%;
+  }
+}
+
+nav #logIn {
+  position: absolute;
+  color: white;
+  font-size: 2em;
+  right: 25%;
+}
+
+@media (min-width: 1200px) {
+  nav #logIn {
+    font-size: 3em;
+    right: 10%;
+  }
+}
+
+nav .menu {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: #AF0404;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+@media (min-width: 1200px) {
+  nav .menu {
+    width: 20%;
+    height: 98vh;
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+}
+
+nav .menu .listItem {
+  font-size: 1.2em;
+  padding: 10px;
+  margin: 10px;
+}
+
+@media (min-width: 1200px) {
+  nav .menu .listItem {
+    font-size: 2em;
+  }
+}
+
+nav .menu .listItem:last-child {
+  background-color: #252525;
+  border-radius: 10px;
+}
+
+nav .menu .listItem a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+
+nav .menu #curtains {
+  position: absolute;
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  nav .menu #curtains {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 67%;
+    right: 87%;
+    top: 0px;
+  }
+}
+
+nav .menu.menu-active {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+@media (min-width: 1200px) {
+  nav .menu.menu-active {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
