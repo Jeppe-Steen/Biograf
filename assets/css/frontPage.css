@@ -36,8 +36,7 @@
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: first;
-  height: 60vh;
-  background-color: #333;
+  height: 50vh;
 }
 
 @media (min-width: 1200px) {
@@ -46,7 +45,13 @@
   }
 }
 
+.page-container .hero-section .first img {
+  width: 100%;
+  height: 100%;
+}
+
 .page-container .hero-section .second {
+  position: relative;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: second;
@@ -106,6 +111,24 @@
   .page-container .hero-section .second p {
     padding: 1% 0;
     font-size: 1em;
+  }
+}
+
+.page-container .hero-section .second svg {
+  display: none;
+  position: absolute;
+}
+
+@media (min-width: 1200px) {
+  .page-container .hero-section .second svg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    bottom: 0;
+    right: 100%;
+    -webkit-filter: drop-shadow(-10px 0px 5px #00000030);
+            filter: drop-shadow(-10px 0px 5px #00000030);
   }
 }
 
@@ -199,12 +222,58 @@
   grid-area: second;
   height: 60vh;
   background-color: #252525;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: 1fr 1fr / 1fr 1fr;
+      grid-template-areas: "firstPic secondPic" "thirdPic forthPic";
+  padding: 5%;
+  grid-gap: 5%;
 }
 
 @media (min-width: 1200px) {
   .page-container .about-section .second {
     height: 85vh;
+    padding: 10%;
+    grid-gap: 5%;
   }
+}
+
+.page-container .about-section .second img {
+  width: 100%;
+  height: 100%;
+}
+
+.page-container .about-section .second img.imgOne {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: firstPic;
+}
+
+.page-container .about-section .second img.imgTwo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: secondPic;
+}
+
+.page-container .about-section .second img.imgThree {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: thirdPic;
+}
+
+.page-container .about-section .second img.imgFour {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: forthPic;
 }
 
 .page-container .newsletter-span {
@@ -232,6 +301,7 @@
   width: 80%;
   color: white;
   text-align: center;
+  text-transform: uppercase;
 }
 
 @media (min-width: 1200px) {
@@ -280,13 +350,14 @@
   width: 70%;
   padding: 10px 20px;
   border: none;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 
 @media (min-width: 1200px) {
   .page-container .newsletter-span span input {
-    padding: 10px 30px;
+    padding: 20px 30px;
+    font-size: 1.2em;
   }
 }
 
@@ -296,12 +367,200 @@
   border: none;
   background-color: #252525;
   color: white;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+@media (min-width: 1200px) {
+  .page-container .newsletter-span span button {
+    padding: 20px 10px;
+    font-size: 1.2em;
+  }
+}
+
+.page-container .newsletter-span span button:hover {
+  cursor: pointer;
 }
 
 .page-container .choosenMovies-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
-  height: 70vh;
   background-color: #252525;
+  padding: 5% 10%;
+}
+
+@media (min-width: 1200px) {
+  .page-container .choosenMovies-section {
+    height: auto;
+    background-color: #252525;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template: auto / 1fr 1fr 1fr 1fr;
+    grid-gap: 0 50px;
+  }
+}
+
+.page-container .choosenMovies-section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 280px;
+  margin-top: 15px;
+}
+
+@media (min-width: 1200px) {
+  .page-container .choosenMovies-section div {
+    position: relative;
+    height: 400px;
+    width: auto;
+    margin-top: none;
+  }
+}
+
+.page-container .choosenMovies-section div figure {
+  position: relative;
+  width: 80%;
+  border: 5px solid #AF0404;
+  height: auto;
+}
+
+.page-container .choosenMovies-section div figure img {
+  height: 100%;
+  width: 100%;
+}
+
+.page-container .choosenMovies-section div figure figcaption {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  background-color: #373737cc;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  color: #fff;
+  visibility: hidden;
+  letter-spacing: 2px;
+}
+
+.page-container .choosenMovies-section div figure figcaption h3 {
+  font-size: 1.5em;
+}
+
+.page-container .choosenMovies-section div figure figcaption p {
+  font-size: .5em;
+}
+
+.page-container .choosenMovies-section div figure:hover figcaption {
+  visibility: visible;
+}
+
+.page-container .choosenMovies-section div button {
+  margin: 0 auto;
+  margin-top: -12px;
+  padding: 20px;
+  width: 80%;
+  background-color: #AF0404;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 3px;
+  z-index: 1;
+}
+
+@media (min-width: 1200px) {
+  .page-container .choosenMovies-section div button {
+    margin-top: -5px;
+  }
+}
+
+.page-container .choosenMovies-section div button:hover {
+  cursor: pointer;
+  background-color: #ad4d4d;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.page-container .seeMore-span {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #252525;
+  padding: 5% 0 10% 0;
+}
+
+@media (min-width: 1200px) {
+  .page-container .seeMore-span {
+    padding: 2% 0 4% 0;
+  }
+}
+
+.page-container .seeMore-span a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 20px;
+  background-color: #AF0404;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+@media (min-width: 1200px) {
+  .page-container .seeMore-span a {
+    width: 15vw;
+  }
+}
+
+.page-container .seeMore-span a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }

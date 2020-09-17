@@ -31,15 +31,20 @@ $greyColor: #252525;
         .first {
             position: relative; //dette er for at kunne bruge svgen
             grid-area: first;
-            height: 60vh;
-            background-color: #333;
-
+            height: 50vh;
+            
             @media (min-width: 1200px) {
                 height: 85vh;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
             }
         }
 
         .second {
+            position: relative;
             grid-area: second;
             background-color: $redColor;
             height: auto;
@@ -79,6 +84,19 @@ $greyColor: #252525;
                 @media (min-width: 1200px) {
                     padding: 1% 0;
                     font-size: 1em;
+                }
+            }
+
+            svg {
+                display: none;
+                position: absolute;
+
+                @media (min-width: 1200px) {
+                    display: flex;
+                    height: 100%;
+                    bottom: 0;
+                    right: 100%;
+                    filter: drop-shadow(-10px 0px 5px #00000030);
                 }
             }
         }
@@ -140,9 +158,39 @@ $greyColor: #252525;
             grid-area: second;
             height: 60vh;
             background-color: $greyColor;
+            position: relative;
+            display: flex;
+            align-items: center;
+            display: grid;
+            grid-template: 1fr 1fr / 1fr 1fr;
+            grid-template-areas: 
+            "firstPic secondPic"
+            "thirdPic forthPic";
+            padding: 5%;
+            grid-gap: 5%;
 
             @media (min-width: 1200px) {
                 height: 85vh;
+                padding: 10%;
+                grid-gap: 5%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+
+                &.imgOne {
+                    grid-area: firstPic;
+                }
+                &.imgTwo {
+                    grid-area: secondPic;
+                }
+                &.imgThree {
+                    grid-area: thirdPic;
+                }
+                &.imgFour {
+                    grid-area: forthPic;
+                }
             }
         }
     }
@@ -163,6 +211,7 @@ $greyColor: #252525;
             width: 80%;
             color: white;
             text-align: center;
+            text-transform: uppercase;
 
             @media (min-width: 1200px) {
                 padding: 2% 0;
@@ -195,11 +244,12 @@ $greyColor: #252525;
                 width: 70%;
                 padding: 10px 20px;
                 border: none;
-                border-top-left-radius: 20px;
-                border-bottom-left-radius: 20px;
+                border-top-left-radius: 50px;
+                border-bottom-left-radius: 50px;
 
                 @media (min-width: 1200px) {
-                    padding: 10px 30px;
+                    padding: 20px 30px;
+                    font-size: 1.2em;
                 }
             }
 
@@ -209,15 +259,157 @@ $greyColor: #252525;
                 border: none;
                 background-color: $greyColor;
                 color: white;
-                border-top-right-radius: 20px;
-                border-bottom-right-radius: 20px;
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+
+                @media (min-width: 1200px) {
+                    padding: 20px 10px;
+                    font-size: 1.2em;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
 
     .choosenMovies-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         width: 100%;
-        height: 70vh;
         background-color: $greyColor;
+        padding: 5% 10%;
+
+        @media (min-width: 1200px) {
+            height: auto;
+            background-color: $greyColor;
+    
+            display: grid;
+            grid-template: auto / 1fr 1fr 1fr 1fr;
+            grid-gap: 0 50px;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: fit-content;
+            width: 280px;
+            margin-top: 15px;
+
+            @media (min-width: 1200px) {
+                position: relative;
+                height: 400px;
+                width: auto;
+                margin-top: none;
+            }
+
+            figure {
+                position: relative;
+                width: 80%;
+                border: 5px solid $redColor;
+                height: auto;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+
+                figcaption {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    background-color: #373737cc;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    text-transform: uppercase;
+                    color: #fff;
+                    visibility: hidden;
+                    letter-spacing: 2px;
+
+                    @media (min-width: 1200px) {
+                    }
+
+                    h3 {
+                        font-size: 1.5em;
+                    }
+
+                    p {
+                        font-size: .5em;
+                    }
+                }
+
+                &:hover {
+                    figcaption {
+                        visibility: visible;
+                    }
+                }
+            }
+
+            button {
+                margin: 0 auto;
+                margin-top: -12px;
+                padding: 20px;
+                width: 80%;
+                background-color: $redColor;
+                border: none;
+                color: white;
+                text-transform: uppercase;
+                font-size: 16px;
+                letter-spacing: 3px;
+                z-index: 1;
+
+                @media (min-width: 1200px) {
+                    margin-top: -5px
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #ad4d4d;
+                    transition: .2s;
+                }
+            }
+        }
+    }
+
+    .seeMore-span {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $greyColor;
+        padding: 5% 0 10% 0;
+
+        @media (min-width: 1200px) {
+            padding: 2% 0 4% 0;
+        }
+
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 20px;
+            background-color: $redColor;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 3px;
+
+            @media (min-width: 1200px) {
+                width: 15vw;
+            }
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
     }
 }
