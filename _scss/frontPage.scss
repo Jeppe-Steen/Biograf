@@ -1,0 +1,223 @@
+$redColor: #AF0404;
+$greyColor: #252525;
+
+@mixin gridTemplateLaptop($widthOne, $widthTwo) {
+    display: grid;
+    grid-template:/*height*/ auto / $widthOne $widthTwo /*width*/;
+    grid-template-areas: "first second"; 
+}
+@mixin gridTemplateMobile() {
+    display: grid;
+    grid-template: /*height*/ auto auto / 100% /*width*/;
+    grid-template-areas:
+    "first" 
+    "second"; 
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+
+    .hero-section {
+        @include gridTemplateMobile();
+        height: auto;
+
+        @media (min-width: 1200px) {
+            @include gridTemplateLaptop(55%, 45%);
+        }
+
+        .first {
+            position: relative; //dette er for at kunne bruge svgen
+            grid-area: first;
+            height: 60vh;
+            background-color: #333;
+
+            @media (min-width: 1200px) {
+                height: 85vh;
+            }
+        }
+
+        .second {
+            grid-area: second;
+            background-color: $redColor;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            padding: 5% 0;
+
+            @media (min-width: 1200px) {
+                height: 85vh;
+            }
+
+            header {
+                width: 80%;
+                padding: 5% 0;
+
+                @media (min-width: 1200px) {
+                    padding: 2% 0;
+                }
+
+                h1 {
+                    font-size: 2em;
+
+                    @media (min-width: 1200px) {
+                        font-size: 2.5em;
+                    }
+                }
+            }
+
+            p {
+                padding: 5% 0;
+                font-size: 1em;
+                width: 80%;
+
+                @media (min-width: 1200px) {
+                    padding: 1% 0;
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+
+    .about-section {
+        @include gridTemplateMobile();
+        height: auto;
+
+        @media (min-width: 1200px) {
+            @include gridTemplateLaptop(50%, 50%);
+        }
+
+        .first {
+            grid-area: first;
+            height: auto;
+            background-color: $greyColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            padding: 5% 0;
+
+            @media (min-width: 1200px) {
+                height: 85vh;
+            }
+
+            header {
+                width: 80%;
+                padding: 5% 0;
+
+                @media (min-width: 1200px) {
+                    padding: 2% 0;
+                }
+
+                h2 {
+                    font-size: 2em;
+
+                    @media (min-width: 1200px) {
+                        font-size: 2.5em;
+                    }
+                }
+            }
+
+            p {
+                padding: 5% 0;
+                font-size: 1em;
+                width: 80%;
+
+                @media (min-width: 1200px) {
+                    padding: 1% 0;
+                    font-size: 1em;
+                }
+            }
+        }
+
+        .second {
+            grid-area: second;
+            height: 60vh;
+            background-color: $greyColor;
+
+            @media (min-width: 1200px) {
+                height: 85vh;
+            }
+        }
+    }
+
+    .newsletter-span {
+        width: 100%;
+        height: auto;
+        background-color: $redColor;
+        padding: 0 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        header {
+            padding: 5% 0;
+            width: 80%;
+            color: white;
+            text-align: center;
+
+            @media (min-width: 1200px) {
+                padding: 2% 0;
+            }
+            
+            h2 {
+                font-size: 2em;
+
+                @media (min-width: 1200px) {
+                    font-size: 2.5em;
+                }
+            }
+        }
+
+        span {
+            width: 80%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 0 0 5% 0;
+
+            @media (min-width: 1200px) {
+                width: 30%;
+                padding: 0 0 2.5% 0;
+            }
+
+            input {
+                width: 70%;
+                padding: 10px 20px;
+                border: none;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+
+                @media (min-width: 1200px) {
+                    padding: 10px 30px;
+                }
+            }
+
+            button {
+                width: 30%;
+                padding: 10px;
+                border: none;
+                background-color: $greyColor;
+                color: white;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+        }
+    }
+
+    .choosenMovies-section {
+        width: 100%;
+        height: 70vh;
+        background-color: $greyColor;
+    }
+}
