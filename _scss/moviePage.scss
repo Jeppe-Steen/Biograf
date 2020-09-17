@@ -6,11 +6,12 @@
     height: auto;
 
     .movie-hero {
-      background-image: url(/assets/media/img/movie-hero.jpg);
+      background-image: url(/assets/media/img/moviehero8.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      background-position-y: -100px;
+      background-position-y: -235px;
       height: 85vh;
+      opacity: 1;
     }
 
     .film-filtrering {
@@ -21,6 +22,7 @@
       background-color: #252525;
 
       select {
+        cursor: pointer;
         padding: 12px 100px;
         margin-right: 5%;
         -moz-appearance: none;
@@ -86,6 +88,7 @@
             text-transform: uppercase;
             color: #fff;
             visibility: hidden;
+            letter-spacing: 2px;
             p {
               font-size: .5em;
             }
@@ -133,6 +136,7 @@
       background-image: url(/assets/media/img/movie-hero.jpg);
       background-size: cover;
       background-position: center;
+      background-position-y: 70px;
       height: 50vh;
       width: 100%;
     }
