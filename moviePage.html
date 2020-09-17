@@ -1,36 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VeuBox biograf - film</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/moviePage.css">
-    <link rel="stylesheet" href="/assets/css/navigation.css">
-</head>
-<body style="width: 100%; height: 100vh; background-color: lightgoldenrodyellow;">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/moviePage.css" />
+    <link rel="stylesheet" href="/assets/css/navigation.css" />
+  </head>
+  <body>
     <nav class="page-navigation">
-        <img id="logo" src="/assets/media/svg/veubox.svg" alt="Vuebox-logo">
-        <i id="burgerBar" class="fas fa-bars"></i>
-        <i id="logIn" class="fas fa-user-circle"></i>
-        
-        <ul class="menu">
-            <li class="listItem"><a href="/index.html">FORSIDE</a></li>
-            <li class="listItem"><a href="/moviePage.html">FILM</a></li>
-            <li class="listItem"><a href="/facilityPage.html">FACILITETER</a></li>
-            <li class="listItem"><a href="javascript:void(0)">TILMELDING</a></li>
-            <li class="listItem"><a href="#contact">KONTAKT</a></li>
-            <img id="curtains" src="/assets/media/svg/curtain.svg" alt="">
-        </ul>
+      <img id="logo" src="/assets/media/svg/veubox.svg" alt="Vuebox-logo" />
+      <i id="burgerBar" class="fas fa-bars"></i>
+      <i id="logIn" class="fas fa-user-circle"></i>
+
+      <ul class="menu">
+        <li class="listItem"><a href="/index.html">FORSIDE</a></li>
+        <li class="listItem"><a href="/moviePage.html">FILM</a></li>
+        <li class="listItem"><a href="/facilityPage.html">FACILITETER</a></li>
+        <li class="listItem"><a href="javascript:void(0)">TILMELDING</a></li>
+        <li class="listItem"><a href="#contact">KONTAKT</a></li>
+        <img id="curtains" src="/assets/media/svg/curtain.svg" alt="" />
+      </ul>
     </nav>
 
-    <main class="page-container"></main>
+    <main class="page-container">
+      <section class="movie-hero"></section>
+
+      <section class="film-filtrering">
+        <select name="" id="">
+          <option selected disabled>Vælg genre</option>
+          <option value="">Action</option>
+          <option value="">Horror</option>
+          <option value="">Børnefilm</option>
+        </select>
+
+        <select name="" id="">
+          <option disabled selected>Vælg måned</option>
+          <option value="">Børn</option>
+          <option value="">Senior</option>
+          <option value="">Almindelig</option>
+        </select>
+
+        <select name="" id="">
+          <option disabled selected>Vælg gruppe</option>
+          <option value="">Børn</option>
+          <option value="">Senior</option>
+          <option value="">Almindelig</option>
+        </select>
+      </section>
+
+      <section class="film-gallery">
+        <div class="">
+          <figure>
+              <img src="/assets/media/img/Poster-Riot.jpg" alt="" />
+              <figcaption><h3>The Riot Club</h3><p>Filmens Varighed: 107min</p></figcaption>
+          </figure>
+          <button>Køb Billet</button>
+        </div>
+
+        <div class="">
+          <figure>
+              <img src="/assets/media/img/Poster-Trash.jpg" alt="" />
+              <figcaption><h3>Trash</h3><p>Filmens Varighed: 114min</p></figcaption>
+          </figure>
+          <button>Køb Billet</button>
+        </div>
+
+        <div class="">
+          <figure>
+              <img src="/assets/media/img/Poster-Citizenfour.jpg" alt="" />
+              <figcaption><h3>Citizenfour</h3><p>Filmens Varighed: 114min</p></figcaption>
+          </figure>
+          <button>Køb Billet</button>
+        </div>
+
+        <div class="">
+          <figure>
+              <img src="/assets/media/img/Poster-Riot.jpg" alt="" />
+              <figcaption><h3>The Riot Club</h3><p>Filmens Varighed: 107min</p></figcaption>
+          </figure>
+          <button>Køb Billet</button>
+        </div>
+
+        <div class="">
+          <figure>
+              <img src="/assets/media/img/Poster-Trash.jpg" alt="" />
+              <figcaption><h3>Trash</h3><p>Filmens Varighed: 114min</p></figcaption>
+          </figure>
+          <button>Køb Billet</button>
+        </div>
+
+        <div class="">
+          <figure>
+              <img src="/assets/media/img/Poster-Citizenfour.jpg" alt="" />
+              <figcaption><h3>Citizenfour</h3><p>Filmens Varighed: 114min</p></figcaption>
+          </figure>
+          <button>Køb Billet</button>
+        </div>
+
+        <div class="">
+          <figure>
+              <img src="/assets/media/img/Poster-Riot.jpg" alt="" />
+              <figcaption><h3>The Riot Club</h3><p>Filmens Varighed: 107min</p></figcaption>
+          </figure>
+          <button>Køb Billet</button>
+        </div>
+
+        <div class="">
+          <figure>
+              <img src="/assets/media/img/Poster-Trash.jpg" alt="" />
+              <figcaption><h3>Trash</h3><p>Filmens Varighed: 114min</p></figcaption>
+          </figure>
+          <button>Køb Billet</button>
+        </div>
+
+        <div class="">
+          <figure>
+              <img src="/assets/media/img/Poster-Citizenfour.jpg" alt="" />
+              <figcaption><h3>Citizenfour</h3><p>Filmens Varighed: 114min</p></figcaption>
+          </figure>
+          <button>Køb Billet</button>
+        </div>
+
+        <div class="">
+          <figure>
+              <img src="/assets/media/img/Poster-Riot.jpg" alt="" />
+              <figcaption><h3>The Riot Club</h3><p>Filmens Varighed: 107min</p></figcaption>
+          </figure>
+          <button>Køb Billet</button>
+        </div>
+
+        <div class="">
+          <figure>
+              <img src="/assets/media/img/Poster-Trash.jpg" alt="" />
+              <figcaption><h3>Trash</h3><p>Filmens Varighed: 114min</p></figcaption>
+          </figure>
+          <button>Køb Billet</button>
+        </div>
+
+        <div class="">
+          <figure>
+              <img src="/assets/media/img/Poster-Citizenfour.jpg" alt="" />
+              <figcaption><h3>Citizenfour</h3><p>Filmens Varighed: 114min</p></figcaption>
+          </figure>
+          <button>Køb Billet</button>
+        </div>
+      </section>
+    </main>
 
     <footer class="page-footer"></footer>
 
     <script src="/assets/js/navigation.js"></script>
-</body>
+  </body>
 </html>

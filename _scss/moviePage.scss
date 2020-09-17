@@ -1,0 +1,244 @@
+@media (min-width: 1200px) {
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+
+    .movie-hero {
+      background-image: url(/assets/media/img/movie-hero.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: -100px;
+      height: 85vh;
+    }
+
+    .film-filtrering {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 15vh;
+      background-color: #252525;
+
+      select {
+        padding: 12px 100px;
+        margin-right: 5%;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        font-size: 16px;
+        background-color: #af0404;
+        border: none;
+        color: white;
+        text-transform: uppercase;
+        text-align-last: center;
+
+        &:last-child {
+          margin-right: 0%;
+        }
+      }
+    }
+
+    .film-gallery {
+      display: grid;
+      padding: 0px 10% 5% 10%;
+      grid-gap: 150px 50px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      height: fit-content;
+      width: 100%;
+      background-color: #252525;
+
+      div {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 400px;
+        width: auto;
+        margin-top: 50px;
+
+        figure {
+          position: relative;
+          width: 80%;
+          border: 5px solid #af0404;
+          height: auto;
+          transition: visibility 1s ease-in-out;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+
+          figcaption {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background-color: #373737cc;
+            width: 100%;
+            top: 0;
+            left: 0;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            color: #fff;
+            visibility: hidden;
+            p {
+              font-size: .5em;
+            }
+          }
+
+          &:hover {
+            figcaption {
+              visibility: visible;
+            }
+          }
+        }
+
+        button {
+          display: flex;
+          margin: 0 auto;
+          margin-top: -5px;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+          width: 80%;
+          background-color: #af0404;
+          border: none;
+          color: white;
+          text-transform: uppercase;
+          font-size: 16px;
+          letter-spacing: 3px;
+          &:hover {
+            cursor: pointer;
+            background-color: #ad4d4d;
+            transition: 0.2s;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+
+    .movie-hero {
+      background-image: url(/assets/media/img/movie-hero.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 50vh;
+      width: 100%;
+    }
+    
+    .film-filtrering {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 20vh;
+      background-color: #252525;
+
+      select {
+        width: 60%;
+        padding: 6px;
+        margin-top: 5px;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        font-size: 14px;
+        background-color: #af0404;
+        border: none;
+        color: white;
+        text-transform: uppercase;
+        text-align-last: center;
+      }
+    }
+    
+    .film-gallery {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      background-color: #252525;
+      padding: 0px 10% 5% 10%;
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: fit-content;
+        width: 280px;
+        margin-top: 15px;
+
+        figure {
+          position: relative;
+          width: 80%;
+          border: 5px solid #af0404;
+          height: auto;
+          transition: visibility 1s ease-in-out;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+          figcaption {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background-color: #373737cc;
+            width: 100%;
+            top: 0;
+            left: 0;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            color: #fff;
+            visibility: hidden;
+
+            h3 {
+              font-size: 1.1em;
+            }
+
+            p {
+              font-size: .5em;
+            }
+          }
+
+          &:hover {
+            figcaption {
+              visibility: visible;
+            }
+          }
+        }
+
+        button {
+          display: flex;
+          margin: 0 auto;
+          margin-top: -12px;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+          width: 80%;
+          background-color: #af0404;
+          border: none;
+          color: white;
+          text-transform: uppercase;
+          font-size: 16px;
+          letter-spacing: 3px;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

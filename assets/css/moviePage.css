@@ -1,1 +1,311 @@
-/* No CSS */
+@media (min-width: 1200px) {
+  .page-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .page-container .movie-hero {
+    background-image: url(/assets/media/img/movie-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -100px;
+    height: 85vh;
+  }
+  .page-container .film-filtrering {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 15vh;
+    background-color: #252525;
+  }
+  .page-container .film-filtrering select {
+    padding: 12px 100px;
+    margin-right: 5%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    font-size: 16px;
+    background-color: #af0404;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    text-align-last: center;
+  }
+  .page-container .film-filtrering select:last-child {
+    margin-right: 0%;
+  }
+  .page-container .film-gallery {
+    display: -ms-grid;
+    display: grid;
+    padding: 0px 10% 5% 10%;
+    grid-gap: 150px 50px;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    background-color: #252525;
+  }
+  .page-container .film-gallery div {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 400px;
+    width: auto;
+    margin-top: 50px;
+  }
+  .page-container .film-gallery div figure {
+    position: relative;
+    width: 80%;
+    border: 5px solid #af0404;
+    height: auto;
+    -webkit-transition: visibility 1s ease-in-out;
+    transition: visibility 1s ease-in-out;
+  }
+  .page-container .film-gallery div figure img {
+    height: 100%;
+    width: 100%;
+  }
+  .page-container .film-gallery div figure figcaption {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    background-color: #373737cc;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #fff;
+    visibility: hidden;
+  }
+  .page-container .film-gallery div figure figcaption p {
+    font-size: .5em;
+  }
+  .page-container .film-gallery div figure:hover figcaption {
+    visibility: visible;
+  }
+  .page-container .film-gallery div button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    margin-top: -5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px;
+    width: 80%;
+    background-color: #af0404;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+  .page-container .film-gallery div button:hover {
+    cursor: pointer;
+    background-color: #ad4d4d;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 1199px) {
+  .page-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .page-container .movie-hero {
+    background-image: url(/assets/media/img/movie-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+  }
+  .page-container .film-filtrering {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 20vh;
+    background-color: #252525;
+  }
+  .page-container .film-filtrering select {
+    width: 60%;
+    padding: 6px;
+    margin-top: 5px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    font-size: 14px;
+    background-color: #af0404;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    text-align-last: center;
+  }
+  .page-container .film-gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    background-color: #252525;
+    padding: 0px 10% 5% 10%;
+  }
+  .page-container .film-gallery div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 280px;
+    margin-top: 15px;
+  }
+  .page-container .film-gallery div figure {
+    position: relative;
+    width: 80%;
+    border: 5px solid #af0404;
+    height: auto;
+    -webkit-transition: visibility 1s ease-in-out;
+    transition: visibility 1s ease-in-out;
+  }
+  .page-container .film-gallery div figure img {
+    height: 100%;
+    width: 100%;
+  }
+  .page-container .film-gallery div figure figcaption {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    background-color: #373737cc;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #fff;
+    visibility: hidden;
+  }
+  .page-container .film-gallery div figure figcaption h3 {
+    font-size: 1.1em;
+  }
+  .page-container .film-gallery div figure figcaption p {
+    font-size: .5em;
+  }
+  .page-container .film-gallery div figure:hover figcaption {
+    visibility: visible;
+  }
+  .page-container .film-gallery div button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    margin-top: -12px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px;
+    width: 80%;
+    background-color: #af0404;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 3px;
+    z-index: 1;
+  }
+}
