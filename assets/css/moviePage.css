@@ -121,7 +121,7 @@
     letter-spacing: 2px;
   }
   .page-container .film-gallery div figure figcaption p {
-    font-size: .5em;
+    font-size: 0.5em;
   }
   .page-container .film-gallery div figure:hover figcaption {
     visibility: visible;
@@ -285,7 +285,7 @@
     font-size: 1.1em;
   }
   .page-container .film-gallery div figure figcaption p {
-    font-size: .5em;
+    font-size: 0.5em;
   }
   .page-container .film-gallery div figure:hover figcaption {
     visibility: visible;
