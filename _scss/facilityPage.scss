@@ -1,0 +1,357 @@
+$redColor: #AF0404;
+$greyColor: #252525;
+
+@mixin gridTemplateLaptop($widthOne, $widthTwo) {
+    display: grid;
+    grid-template:/*height*/ auto / $widthOne $widthTwo /*width*/;
+    grid-template-areas: "first second"; 
+}
+@mixin gridTemplateMobile() {
+    display: grid;
+    grid-template: /*height*/ auto auto / 100% /*width*/;
+    grid-template-areas:
+    "first" 
+    "second"; 
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+
+    .firstFacility-section {
+        @include gridTemplateMobile();
+        height: auto;
+
+        @media (min-width: 1200px) {
+            @include gridTemplateLaptop(55%, 45%);
+        }
+
+        .first {
+            position: relative; //dette er for at kunne bruge svgen
+            grid-area: first;
+            height: 50vh;
+            
+            @media (min-width: 1200px) {
+                height: 85vh;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .second {
+            position: relative;
+            grid-area: second;
+            background-color: $redColor;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            padding: 5% 0;
+
+            @media (min-width: 1200px) {
+                height: 85vh;
+            }
+
+            header {
+                width: 80%;
+                padding: 5% 0;
+
+                @media (min-width: 1200px) {
+                    padding: 2% 0;
+                }
+
+                h1 {
+                    font-size: 2em;
+
+                    @media (min-width: 1200px) {
+                        font-size: 2.5em;
+                    }
+                }
+            }
+
+            p {
+                padding: 5% 0;
+                font-size: 1em;
+                width: 80%;
+
+                @media (min-width: 1200px) {
+                    padding: 1% 0;
+                    font-size: 1em;
+                }
+            }
+
+            svg {
+                display: none;
+                position: absolute;
+                stroke: $redColor;
+                stroke-width: 2px;
+                fill: $redColor;
+
+                @media (min-width: 1200px) {
+                    display: flex;
+                    height: 100%;
+                    bottom: 0;
+                    right: 100%;
+                    filter: drop-shadow(-10px 0px 5px #00000030);
+                }
+            }
+        }
+    }
+
+    .secondFacility-section {
+        @include gridTemplateMobile();
+        height: auto;
+
+        @media (min-width: 1200px) {
+            @include gridTemplateLaptop(45%, 55%);
+        }
+
+        .first {
+            position: relative; //dette er for at kunne bruge svgen
+            grid-area: second;
+            height: 50vh;
+            
+            @media (min-width: 1200px) {
+                height: 85vh;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .second {
+            position: relative;
+            grid-area: first;
+            background-color: $greyColor;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            padding: 5% 0;
+
+            @media (min-width: 1200px) {
+                height: 85vh;
+            }
+
+            header {
+                width: 80%;
+                padding: 5% 0;
+
+                @media (min-width: 1200px) {
+                    padding: 2% 0;
+                }
+
+                h1 {
+                    font-size: 2em;
+
+                    @media (min-width: 1200px) {
+                        font-size: 2.5em;
+                    }
+                }
+            }
+
+            p {
+                padding: 5% 0;
+                font-size: 1em;
+                width: 80%;
+
+                @media (min-width: 1200px) {
+                    padding: 1% 0;
+                    font-size: 1em;
+                }
+            }
+
+            svg {
+                display: none;
+                position: absolute;
+                stroke: $greyColor;
+                stroke-width: 2px;
+                fill: $greyColor;
+
+                @media (min-width: 1200px) {
+                    display: flex;
+                    height: 100%;
+                    bottom: 0;
+                    left: 100%;
+                    transform: scaleX(-1);
+                    filter: drop-shadow(-10px 0px 5px #00000030);
+                }
+            }
+        }
+    }
+
+    .newsletter-span {
+        width: 100%;
+        height: auto;
+        background-color: $redColor;
+        padding: 0 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        header {
+            padding: 5% 0;
+            width: 80%;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+
+            @media (min-width: 1200px) {
+                padding: 2% 0;
+            }
+            
+            h2 {
+                font-size: 2em;
+
+                @media (min-width: 1200px) {
+                    font-size: 2.5em;
+                }
+            }
+        }
+
+        span {
+            width: 80%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 0 0 5% 0;
+
+            @media (min-width: 1200px) {
+                width: 30%;
+                padding: 0 0 2.5% 0;
+            }
+
+            input {
+                width: 70%;
+                padding: 10px 20px;
+                border: none;
+                border-top-left-radius: 50px;
+                border-bottom-left-radius: 50px;
+
+                @media (min-width: 1200px) {
+                    padding: 20px 30px;
+                    font-size: 1.2em;
+                }
+            }
+
+            button {
+                width: 30%;
+                padding: 10px;
+                border: none;
+                background-color: $greyColor;
+                color: white;
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+
+                @media (min-width: 1200px) {
+                    padding: 20px 10px;
+                    font-size: 1.2em;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .thirdFacility-section {
+        @include gridTemplateMobile();
+        height: auto;
+
+        @media (min-width: 1200px) {
+            @include gridTemplateLaptop(55%, 45%);
+        }
+
+        .first {
+            position: relative; //dette er for at kunne bruge svgen
+            grid-area: first;
+            height: 50vh;
+            
+            @media (min-width: 1200px) {
+                height: 85vh;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .second {
+            position: relative;
+            grid-area: second;
+            background-color: $greyColor;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            padding: 5% 0;
+
+            @media (min-width: 1200px) {
+                height: 85vh;
+            }
+
+            header {
+                width: 80%;
+                padding: 5% 0;
+
+                @media (min-width: 1200px) {
+                    padding: 2% 0;
+                }
+
+                h1 {
+                    font-size: 2em;
+
+                    @media (min-width: 1200px) {
+                        font-size: 2.5em;
+                    }
+                }
+            }
+
+            p {
+                padding: 5% 0;
+                font-size: 1em;
+                width: 80%;
+
+                @media (min-width: 1200px) {
+                    padding: 1% 0;
+                    font-size: 1em;
+                }
+            }
+
+            svg {
+                display: none;
+                position: absolute;
+                stroke: $greyColor;
+                stroke-width: 2px;
+                fill: $greyColor;
+
+                @media (min-width: 1200px) {
+                    display: flex;
+                    height: 100%;
+                    bottom: 0;
+                    right: 100%;
+                    filter: drop-shadow(-10px 0px 5px #00000030);
+                }
+            }
+        }
+    }
+}
