@@ -53,6 +53,7 @@ nav {
         color: white;
         font-size: 2em;
         right: 25%;
+        cursor: pointer;
 
         @media (min-width: $mediaLaptop) {
             font-size: 3em;

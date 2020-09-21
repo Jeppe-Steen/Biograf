@@ -54,6 +54,7 @@ nav #logIn {
   color: white;
   font-size: 2em;
   right: 25%;
+  cursor: pointer;
 }
 
 @media (min-width: 1200px) {

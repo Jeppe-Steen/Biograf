@@ -68,7 +68,7 @@
         </span>
 
         <section class="choosenMovies-section">
-            <div>
+            <article>
                 <figure>
                     <img src="/assets/media/img/Poster-Riot.jpg" alt="">
                     <figcaption>
@@ -76,9 +76,9 @@
                         <p>Filmens varighed: 114 min</p>
                     </figcaption>
                 </figure>
-                <button>Køb billet</button>
-            </div>
-            <div>
+                <button>Læs mere</button>
+            </article>
+            <article>
                 <figure>
                     <img src="/assets/media/img/Poster-Riot.jpg" alt="">
                     <figcaption>
@@ -86,9 +86,9 @@
                         <p>Filmens varighed: 114 min</p>
                     </figcaption>
                 </figure>
-                <button>Køb billet</button>
-            </div>
-            <div>
+                <button>Læs mere</button>
+            </article>
+            <article>
                 <figure>
                     <img src="/assets/media/img/Poster-Riot.jpg" alt="">
                     <figcaption>
@@ -96,9 +96,9 @@
                         <p>Filmens varighed: 114 min</p>
                     </figcaption>
                 </figure>
-                <button>Køb billet</button>
-            </div>
-            <div>
+                <button>Læs mere</button>
+            </article>
+            <article>
                 <figure>
                     <img src="/assets/media/img/Poster-Riot.jpg" alt="">
                     <figcaption>
@@ -106,16 +106,46 @@
                         <p>Filmens varighed: 114 min</p>
                     </figcaption>
                 </figure>
-                <button>Køb billet</button>
-            </div>
+                <button>Læs mere</button>
+            </article>
         </section>
         <span class="seeMore-span">
             <a href="/moviePage.html">Se flere film</a>
         </span>
     </main>
 
+    <!-- DETTE SKAL LIGE LAVES FÆRDIG, JAVASCRIPT FUNGERER IKKE HELT, OG DEN SKAL LIGE LAVES RESPONSIVE -->
+    <section id="loginSection" class="loginAndRegistration">
+        <form action="" method="POST" >
+            <span class="buttons">
+                <a class="loginButton" href="javascript:void(0)">Login</a>
+                <a class="registrationButton" href="javascript:void(0)">registrer</a>
+            </span>
+            <input type="text" placeholder="Brugernavn">
+            <input type="text" placeholder="Kodeord">
+            <button type="button">Login</button>
+            <button id="closeButton" type="button">close</button>
+        </form>
+    </section>
+    <section id="registrationSection" class="loginAndRegistration">
+        <form action="" method="POST" >
+            <span class="buttons">
+                <a class="loginButton" href="javascript:void(0)">Login</a>
+                <a class="registrationButton" href="javascript:void(0)">registrer</a>
+            </span>
+            <input type="text" placeholder="Brugernavn">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Kodeord">
+            <input type="date">
+            <button type="button">Registrer</button>
+            <button id="closeButton" type="button">close</button>
+        </form>
+    </section>
+    <section class="movieInfo"></section>
+
     <footer class="page-footer"></footer>
 
     <script src="/assets/js/navigation.js"></script>
+    <script src="/assets/js/login.js"></script>
 </body>
 </html>
