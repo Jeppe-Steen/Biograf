@@ -15,7 +15,7 @@
     <nav class="page-navigation">
         <img id="logo" src="/assets/media/svg/veubox.svg" alt="Vuebox-logo">
         <i id="burgerBar" class="fas fa-bars"></i>
-        <i id="logIn" class="fas fa-user-alt-slash"></i>
+        <i id="logIn" onclick="openForm(1)" class="fas fa-user-alt-slash"></i>
         
         <ul class="menu">
             <li class="listItem"><a href="/index.html">FORSIDE</a></li>
@@ -115,32 +115,10 @@
     </main>
 
     <!-- DETTE SKAL LIGE LAVES FÆRDIG, JAVASCRIPT FUNGERER IKKE HELT, OG DEN SKAL LIGE LAVES RESPONSIVE -->
-    <section id="loginSection" class="loginAndRegistration">
-        <form action="" method="POST" >
-            <span class="buttons">
-                <a class="loginButton" href="javascript:void(0)">Login</a>
-                <a class="registrationButton" href="javascript:void(0)">registrer</a>
-            </span>
-            <input type="text" placeholder="Brugernavn">
-            <input type="text" placeholder="Kodeord">
-            <button type="button">Login</button>
-            <button id="closeButton" type="button">close</button>
-        </form>
+    <section class="loginAndRegistration">
+        <form action="" method="POST" ></form>
     </section>
-    <section id="registrationSection" class="loginAndRegistration">
-        <form action="" method="POST" >
-            <span class="buttons">
-                <a class="loginButton" href="javascript:void(0)">Login</a>
-                <a class="registrationButton" href="javascript:void(0)">registrer</a>
-            </span>
-            <input type="text" placeholder="Brugernavn">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Kodeord">
-            <input type="date">
-            <button type="button">Registrer</button>
-            <button id="closeButton" type="button">close</button>
-        </form>
-    </section>
+
     <section class="movieInfo"></section>
 
     <footer class="page-footer"></footer>
