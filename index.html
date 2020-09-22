@@ -67,63 +67,31 @@
             </span>
         </span>
 
-        <section class="choosenMovies-section">
-            <article>
-                <figure>
-                    <img src="/assets/media/img/Poster-Riot.jpg" alt="">
-                    <figcaption>
-                        <h3>The Riot Club</h3>
-                        <p>Filmens varighed: 114 min</p>
-                    </figcaption>
-                </figure>
-                <button>Læs mere</button>
-            </article>
-            <article>
-                <figure>
-                    <img src="/assets/media/img/Poster-Riot.jpg" alt="">
-                    <figcaption>
-                        <h3>The Riot Club</h3>
-                        <p>Filmens varighed: 114 min</p>
-                    </figcaption>
-                </figure>
-                <button>Læs mere</button>
-            </article>
-            <article>
-                <figure>
-                    <img src="/assets/media/img/Poster-Riot.jpg" alt="">
-                    <figcaption>
-                        <h3>The Riot Club</h3>
-                        <p>Filmens varighed: 114 min</p>
-                    </figcaption>
-                </figure>
-                <button>Læs mere</button>
-            </article>
-            <article>
-                <figure>
-                    <img src="/assets/media/img/Poster-Riot.jpg" alt="">
-                    <figcaption>
-                        <h3>The Riot Club</h3>
-                        <p>Filmens varighed: 114 min</p>
-                    </figcaption>
-                </figure>
-                <button>Læs mere</button>
-            </article>
-        </section>
+        <section class="choosenMovies-section"></section>
+
         <span class="seeMore-span">
             <a href="/moviePage.html">Se flere film</a>
         </span>
     </main>
 
-    <!-- DETTE SKAL LIGE LAVES FÆRDIG, JAVASCRIPT FUNGERER IKKE HELT, OG DEN SKAL LIGE LAVES RESPONSIVE -->
     <section class="loginAndRegistration">
         <form action="" method="POST" ></form>
     </section>
 
-    <section class="movieInfo"></section>
+    <section class="movieInfo-container">
+        <article class="movieInfo">
+            <img id="moviePoster" src="" alt="" />
+            <h2 id="movieTitle">TITLE</h2>
+            <p id="movieDescription">DESCRIPTION</p>
+            <button class="infoButtons" type="button" style="background-color: #af0404;">KØB</button>
+            <button class="infoButtons" type="button" onclick="resetMovieChoice()">TILBAGE</button>
+        </article>
+    </section>
 
     <footer class="page-footer"></footer>
 
     <script src="/assets/js/navigation.js"></script>
     <script src="/assets/js/login.js"></script>
+    <script src="/assets/js/frontPageMovieSelect.js"></script>
 </body>
 </html>

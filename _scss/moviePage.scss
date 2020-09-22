@@ -51,7 +51,7 @@
       width: 100%;
       background-color: #252525;
 
-      div {
+      article {
         position: relative;
         display: flex;
         align-items: center;
@@ -101,7 +101,7 @@
           }
         }
 
-        button {
+        .buttons {
           display: flex;
           margin: 0 auto;
           margin-top: -5px;
@@ -115,6 +115,8 @@
           text-transform: uppercase;
           font-size: 16px;
           letter-spacing: 3px;
+          z-index: 1;
+
           &:hover {
             cursor: pointer;
             background-color: #ad4d4d;
@@ -174,7 +176,7 @@
       background-color: #252525;
       padding: 0px 10% 5% 10%;
 
-      div {
+      article {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -226,7 +228,7 @@
           }
         }
 
-        button {
+        .buttons {
           display: flex;
           margin: 0 auto;
           margin-top: -12px;
@@ -246,3 +248,64 @@
     }
   }
 }
+
+.movieInfo-container {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 9990;
+  backdrop-filter: blur(4px);
+
+  .movieInfo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      display: flex;
+      height: fit-content;
+      background-color: #252525;
+      flex-direction: column;
+      align-items: center;
+      padding: 5%;
+      box-shadow: 0 0 20px #00000050;
+
+      @media (min-width: 1200px) {
+          width: 40%;
+          padding: 2%;
+      }
+  
+      #moviePoster {
+          width: 80%;
+
+          @media (min-width: 1200px) {
+              width: 40%;
+          }
+      }
+  
+      h2, p {
+          margin: 2% 0;
+          color: white;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+
+          @media (min-width: 100%) {
+              margin: 1% 0;
+          }
+      }
+  
+      .infoButtons {
+          width: 60%;
+          border: none;
+          padding: 12px;
+          background-color: #ffffff30;
+          margin: 1% 0;
+          color: white;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+      }
+    }
+  }
