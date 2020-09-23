@@ -1,9 +1,9 @@
 let movieArray = //dette er arrayet som indeholder filmene
 [
-    {number: 0, movieTitle: "joker", movieDescription: "description", moviePoster: "joker.jpg", movieLength: 110},
-    {number: 1, movieTitle: "moonlight", movieDescription: "description", moviePoster: "moonlight.jpg", movieLength: 120},
-    {number: 2, movieTitle: "alien", movieDescription: "description", moviePoster: "alien.jpg", movieLength: 130},
-    {number: 3, movieTitle: "riot", movieDescription: "description", moviePoster: "Riot.jpg", movieLength: 140}
+    {number: 0, movieTitle: "joker", movieDescription: "description", moviePoster: "joker.jpg", movieLength: 110, moviePrice: [80, 50, 60]},
+    {number: 1, movieTitle: "moonlight", movieDescription: "description", moviePoster: "moonlight.jpg", movieLength: 120, moviePrice: [100, 60, 70]},
+    {number: 2, movieTitle: "alien", movieDescription: "description", moviePoster: "alien.jpg", movieLength: 130, moviePrice: [80, 50, 60]},
+    {number: 3, movieTitle: "riot", movieDescription: "description", moviePoster: "Riot.jpg", movieLength: 140, moviePrice: [80, 50, 60]}
 ];
 
 let movieElement, movies = "";
@@ -28,7 +28,8 @@ function setLocalStorage(i) { //her laver vi en funktion som gemmer oplysningern
     localStorage.setItem("movieTitle", movieArray[i].movieTitle);
     localStorage.setItem("movieDescription", movieArray[i].movieDescription);
     localStorage.setItem("moviePoster", movieArray[i].moviePoster);
-    localStorage.setItem("movieLength", movieArray[i].movieLength)
+    localStorage.setItem("movieLength", movieArray[i].movieLength);
+    localStorage.setItem("moviePrice", JSON.stringify(movieArray[i].moviePrice));
 };
 
 function selectedMovies(n) { //her laver vi en funktion som bliver brugt for at vælge en film. denne bliver kaldt ved en onclick på hver film
