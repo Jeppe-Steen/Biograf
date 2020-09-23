@@ -29,7 +29,34 @@
 
     <main class="page-container">
         <section class="booking-section">
-            
+            <header><h2>Billetter til filmen <br> <strong id="movieTitle">n/a</strong></h2></header>
+            <article class="grid-container">
+                <span class="selectTickets">
+                    <header><h3>Vælg billetter</h3></header>
+                    <span class="chooseTickets">
+                        <label for="normalTickets">Normal</label>
+                        <input id="normalTickets" type="text" value="0" />
+                    </span>
+                    <span class="chooseTickets">
+                        <label for="childrenTickets">Børn</label>
+                        <input id="childrenTickets" type="text" value="0" />
+                    </span>
+                    <span class="chooseTickets">
+                        <label for="seniorTickets">Senior</label>
+                        <input id="seniorTickets" type="text" value="0" />
+                    </span>
+                </span>
+
+                <span class="buyTickets">
+                    <span>
+                        <p><strong id="amountOfTickets">0</strong> Billetter</p>
+                        <p>I alt <strong id="ticketPrice">0</strong> kr</p>
+                    </span>
+                    <button type="button">Køb</button>
+                </span>
+
+                <span class="selectSeats"></span>
+            </article>
         </section>
     </main>
 
@@ -41,5 +68,43 @@
 
     <script src="/assets/js/navigation.js"></script>
     <script src="/assets/js/login.js"></script>
+    <script src="/assets/js/selectedMovie.js"></script>
 </body>
 </html>
+
+
+
+
+<!-- <header>
+    <h2>Du bestiller billetter til <br />
+        <span id="movieTitle">JOKER</span>
+    </h2>
+</header>
+
+<article class="tickets-article">
+    <span class="chooseTickets-span">
+        <header>
+            <h3>Vælg billetter</h3>
+        </header>
+        <span class="ticketInput">
+            <label for="">Normal</label>
+            <input type="number" name="" id="" min="1" max="10" value="0" />
+        </span>
+        <span class="ticketInput">
+            <label for="">Børn</label>
+            <input type="number" name="" id="" min="1" max="10" value="0" />
+        </span>
+        <span class="ticketInput">
+            <label for="">Senior</label>
+            <input type="number" name="" id="" min="1" max="10" value="0" />
+        </span>
+    </span>  
+    
+    <span class="buyTickets-span">
+        <span>
+            <p><strong>0</strong> Billetter</p>
+            <p>i alt <strong>0</strong> kr</p>
+        </span>
+        <button>Køb</button>
+    </span>
+</article> -->
