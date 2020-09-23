@@ -39,25 +39,40 @@ seniorTickets.addEventListener("change", (e) => {
 const container = document.querySelector(".selectSeats");
 const seats = document.querySelectorAll(".row .seat");
 
-localStorage.setItem("selectedSeats", "none");
+let selectedSeats = document.querySelectorAll(".row .seat.selected");
+let seatIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat) + 1);
+
+localStorage.setItem("selectedSeats", JSON.stringify(seatIndex));
 
 
-function updateSelectedCount() {
-    let selectedSeats = document.querySelectorAll(".row .seat.selected");
-    let seatIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat) + 1);
+// function updateSelectedCount() {
+//     let selectedSeats = document.querySelectorAll(".row .seat.selected");
+//     let seatIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat) + 1);
 
-    localStorage.setItem("selectedSeats", seatIndex);
-};
+//     localStorage.setItem("selectedSeats", JSON.stringify(seatIndex));
+
+//     // console.log(JSON.parse(localStorage.getItem("selectedSeats")).length);
+// };
 
 
 container.addEventListener("click", (e) => {
-    if(localStorage.getItem("amountOfTickets") > 0) {
-        if(e.target.classList.contains("seat") && !e.target.classList.contains("occupied")) {
-            e.target.classList.toggle("selected");
+    let test = JSON.parse(localStorage.getItem("selectedSeats")).length;
 
-            updateSelectedCount();
+    if(localStorage.getItem("amountOfTickets") > 0) {
+        if(localStorage.getItem("amountOfTickets") >= test) {
+            if(e.target.classList.contains("seat") && !e.target.classList.contains("occupied")) {
+                e.target.classList.toggle("selected");
+
+                let selectedSeats = document.querySelectorAll(".row .seat.selected");
+                let seatIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat) + 1);
+
+                localStorage.setItem("selectedSeats", JSON.stringify(seatIndex));
+
+                console.log(localStorage.getItem("amountOfTickets"));
+                console.log(JSON.parse(localStorage.getItem("selectedSeats")).length);
+            };
         };
-    } else if(!localStorage.getItem("amountOfTickets") === localStorage.getItem("selectedSeats").lenght) {
-        return;
     };
 });
+
+// if(localStorage.getItem("selectedSeats").length <= localStorage.getItem("amountOfTickets")) {
