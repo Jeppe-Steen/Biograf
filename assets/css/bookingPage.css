@@ -6,12 +6,247 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  height: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #252525;
+  padding-top: 15vh;
 }
 
-.page-container .booking-section {
+@media (min-width: 1200px) {
+  .page-container {
+    padding-top: 15vh;
+  }
+}
+
+.page-container header {
   width: 100%;
-  height: 90vh;
-  background-color: #252525;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  padding: 5%;
+  color: white;
+  letter-spacing: 3px;
+}
+
+@media (min-width: 1200px) {
+  .page-container header {
+    padding: 2%;
+  }
+}
+
+.page-container header h2 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1200px) {
+  .page-container header h2 {
+    font-size: 3em;
+  }
+}
+
+.page-container header h2 strong {
+  font-size: 1.5em;
+  color: #AF0404;
+}
+
+@media (min-width: 1200px) {
+  .page-container header h2 strong {
+    font-size: 1.5em;
+  }
+}
+
+.page-container .grid-container {
+  width: 90vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 10% 10% 10%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto auto;
+  -ms-grid-columns: 100%;
+      grid-template: auto auto auto / 100%;
+      grid-template-areas: "selectTickets"  "selectSeats" "buyTickets";
+}
+
+@media (min-width: 1200px) {
+  .page-container .grid-container {
+    width: 60vw;
+    padding: 0 5% 5% 5%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto auto;
+    -ms-grid-columns: 50% 50%;
+        grid-template: auto auto / 50% 50%;
+        grid-template-areas: "selectTickets selectSeats" "buyTickets selectSeats";
+  }
+}
+
+.page-container .grid-container .selectTickets {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: selectTickets;
+  padding: 5% 0 20% 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  .page-container .grid-container .selectTickets {
+    height: 45vh;
+    padding: 5% 5% 20% 5%;
+  }
+}
+
+.page-container .grid-container .selectTickets header {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px;
+  text-align: center;
+  background-color: #00000090;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+@media (min-width: 1200px) {
+  .page-container .grid-container .selectTickets header {
+    padding: 20px;
+  }
+}
+
+.page-container .grid-container .selectTickets .chooseTickets {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.page-container .grid-container .selectTickets .chooseTickets label {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px;
+  text-transform: uppercase;
+  background-color: #ffffff30;
+  border-right: 3px solid #000000c0;
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  .page-container .grid-container .selectTickets .chooseTickets label {
+    padding: 20px;
+  }
+}
+
+.page-container .grid-container .selectTickets .chooseTickets input {
+  padding: 10px;
+  width: 40%;
+  border: none;
+  background-color: #ffffff30;
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  .page-container .grid-container .selectTickets .chooseTickets input {
+    padding: 20px;
+  }
+}
+
+.page-container .grid-container .buyTickets {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: buyTickets;
+  padding: 20% 0 5% 0;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  .page-container .grid-container .buyTickets {
+    height: 25vh;
+    padding: 5% 5% 5% 5%;
+  }
+}
+
+.page-container .grid-container .buyTickets span {
+  width: 100%;
+  height: 60%;
+  background-color: #ffffff30;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10%;
+  color: white;
+}
+
+.page-container .grid-container .buyTickets button {
+  width: 100%;
+  height: 40%;
+  border: none;
+  background-color: #00000090;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.page-container .grid-container .buyTickets button:hover {
+  background-color: #AF0404;
+  cursor: pointer;
+}
+
+.page-container .grid-container .selectSeats {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: selectSeats;
+  background-color: red;
+  padding: 10px;
+  height: 70vh;
+}
+
+@media (min-width: 1200px) {
+  .page-container .grid-container .selectSeats {
+    height: 70vh;
+  }
 }
