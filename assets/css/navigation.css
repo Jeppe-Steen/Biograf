@@ -54,6 +54,7 @@ nav #logIn {
   color: white;
   font-size: 2em;
   right: 25%;
+  cursor: pointer;
 }
 
 @media (min-width: 1200px) {
@@ -100,7 +101,7 @@ nav .menu {
 }
 
 nav .menu .listItem {
-  font-size: 1.2em;
+  font-size: 1.5em;
   padding: 10px;
   margin: 10px;
 }

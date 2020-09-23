@@ -414,7 +414,7 @@
   }
 }
 
-.page-container .choosenMovies-section div {
+.page-container .choosenMovies-section article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,7 +436,7 @@
 }
 
 @media (min-width: 1200px) {
-  .page-container .choosenMovies-section div {
+  .page-container .choosenMovies-section article {
     position: relative;
     height: 400px;
     width: auto;
@@ -444,19 +444,19 @@
   }
 }
 
-.page-container .choosenMovies-section div figure {
+.page-container .choosenMovies-section article figure {
   position: relative;
   width: 80%;
   border: 5px solid #AF0404;
   height: auto;
 }
 
-.page-container .choosenMovies-section div figure img {
+.page-container .choosenMovies-section article figure img {
   height: 100%;
   width: 100%;
 }
 
-.page-container .choosenMovies-section div figure figcaption {
+.page-container .choosenMovies-section article figure figcaption {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -482,19 +482,19 @@
   letter-spacing: 2px;
 }
 
-.page-container .choosenMovies-section div figure figcaption h3 {
+.page-container .choosenMovies-section article figure figcaption h3 {
   font-size: 1.5em;
 }
 
-.page-container .choosenMovies-section div figure figcaption p {
+.page-container .choosenMovies-section article figure figcaption p {
   font-size: .5em;
 }
 
-.page-container .choosenMovies-section div figure:hover figcaption {
+.page-container .choosenMovies-section article figure:hover figcaption {
   visibility: visible;
 }
 
-.page-container .choosenMovies-section div button {
+.page-container .choosenMovies-section article button {
   margin: 0 auto;
   margin-top: -12px;
   padding: 20px;
@@ -509,12 +509,12 @@
 }
 
 @media (min-width: 1200px) {
-  .page-container .choosenMovies-section div button {
+  .page-container .choosenMovies-section article button {
     margin-top: -5px;
   }
 }
 
-.page-container .choosenMovies-section div button:hover {
+.page-container .choosenMovies-section article button:hover {
   cursor: pointer;
   background-color: #ad4d4d;
   -webkit-transition: .2s;
@@ -563,4 +563,247 @@
 .page-container .seeMore-span a:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+.loginAndRegistration {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9990;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  display: none;
+}
+
+.loginAndRegistration.loginAndRegistrationActive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.loginAndRegistration form {
+  width: 90%;
+  height: 90%;
+  background-color: #252525;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 0 0;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 1200px) {
+  .loginAndRegistration form {
+    width: 30%;
+    height: 70%;
+    padding: 2% 0;
+  }
+}
+
+.loginAndRegistration form .buttons {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loginAndRegistration form .buttons a {
+  width: 50%;
+  padding: 30px;
+  background-color: #ffffff06;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+@media (min-width: 1200px) {
+  .loginAndRegistration form .buttons a {
+    width: 40%;
+    padding: 30px;
+  }
+}
+
+.loginAndRegistration form .buttons a:hover {
+  background-color: #af0404;
+}
+
+.loginAndRegistration form .buttons a.buttonActive {
+  background: #AF0404;
+}
+
+.loginAndRegistration form input {
+  width: 90%;
+  padding: 20px;
+  margin-top: 5%;
+  background-color: #ffffff06;
+  border: none;
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  .loginAndRegistration form input {
+    width: 60%;
+  }
+}
+
+.loginAndRegistration form input::-webkit-input-placeholder {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.loginAndRegistration form input:-ms-input-placeholder {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.loginAndRegistration form input::-ms-input-placeholder {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.loginAndRegistration form input::placeholder {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.loginAndRegistration form button {
+  width: 50%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 20px;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  background-color: #00000030;
+  margin-top: 5%;
+  letter-spacing: 3px;
+}
+
+.loginAndRegistration form button:hover {
+  background-color: #AF0404;
+}
+
+.loginAndRegistration form #closeSection {
+  color: white;
+  position: absolute;
+  right: -0.3em;
+  top: -0.45em;
+  font-size: 3em;
+  z-index: 9991;
+}
+
+.loginAndRegistration form #closeSection:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+.movieInfo-container {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 9990;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+.movieInfo-container .movieInfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #252525;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5%;
+  -webkit-box-shadow: 0 0 20px #00000050;
+          box-shadow: 0 0 20px #00000050;
+}
+
+@media (min-width: 1200px) {
+  .movieInfo-container .movieInfo {
+    width: 40%;
+    padding: 2%;
+  }
+}
+
+.movieInfo-container .movieInfo #moviePoster {
+  width: 80%;
+}
+
+@media (min-width: 1200px) {
+  .movieInfo-container .movieInfo #moviePoster {
+    width: 40%;
+  }
+}
+
+.movieInfo-container .movieInfo h2, .movieInfo-container .movieInfo p {
+  margin: 2% 0;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+@media (min-width: 100%) {
+  .movieInfo-container .movieInfo h2, .movieInfo-container .movieInfo p {
+    margin: 1% 0;
+  }
+}
+
+.movieInfo-container .movieInfo .infoButtons {
+  width: 60%;
+  border: none;
+  padding: 12px;
+  background-color: #ffffff30;
+  margin: 1% 0;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }

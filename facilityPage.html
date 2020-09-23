@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="/assets/css/facilityPage.css">
     <link rel="stylesheet" href="/assets/css/navigation.css">
 </head>
-<body style="width: 100%; height: 100vh; background-color: lightgoldenrodyellow;">
+<body>
     <nav class="page-navigation">
         <img id="logo" src="/assets/media/svg/veubox.svg" alt="Vuebox-logo">
         <i id="burgerBar" class="fas fa-bars"></i>
-        <i id="logIn" class="fas fa-user-circle"></i>
+        <i id="logIn" onclick="openForm(1)" class="fas fa-user-alt-slash"></i>
         
         <ul class="menu">
             <li class="listItem"><a href="/index.html">FORSIDE</a></li>
@@ -23,16 +23,64 @@
             <li class="listItem"><a href="/facilityPage.html">FACILITETER</a></li>
             <li class="listItem"><a href="javascript:void(0)">TILMELDING</a></li>
             <li class="listItem"><a href="#contact">KONTAKT</a></li>
-            <img id="curtains" src="/assets/media/svg/curtain.svg" alt="">
+            <svg id="curtains" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.93 1082.83"><defs><style>.cls-1{fill:#af0404;}.cls-1,.cls-2,.cls-3,.cls-4{stroke:#af0404;stroke-miterlimit:10;stroke-width:2.83px;}.cls-2{fill:#bc0000;}.cls-3{fill:#a30000;}.cls-4{fill:#8e0000;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M242.34,1061.17c8.35,24.88,20.73,21.34,33.22,17,1.51-11.86,4.35-23.75,4.31-35.59-.25-63-1.69-125.93-1.79-188.89-.07-44.61,1.79-89.22,2-133.84q.51-125.48,0-250.95c-.14-37.42-2-74.83-1.9-112.24.13-57,1.54-114,1.88-171,.37-61.42.13-122.85.16-184.28H252.38V1033c0,7.35.11,14.72-.2,22-.56,13.61-4.21,11.54-8.46,5.58A4.22,4.22,0,0,1,242.34,1061.17Z"/><path class="cls-1" d="M150.3,1073.78l25.64,4.77c1.52-14.07,4.35-28.14,4.36-42.22q.38-517.45.22-1034.91H155q0,510.47-.22,1020.93C154.78,1039.5,151.86,1056.64,150.3,1073.78Z"/><path class="cls-1" d="M193.91,1060.87c7.47,23.24,18.81,21.93,30.64,17.45,1.53-14.07,4.41-28.14,4.42-42.22q.39-517.33.23-1034.68H203.7q0,517.88,0,1035.75c0,5.87.07,11.77-.17,17.61-.55,13.15-3.89,12.47-8.3,5.74A3.42,3.42,0,0,1,193.91,1060.87Z"/><path class="cls-1" d="M52.41,1074.62l23.69,4.12c1.58-12.44,4.54-24.88,4.55-37.32q.36-520,.18-1040H55.33q0,500.81-.14,1001.63C55.18,1026.91,53.38,1050.76,52.41,1074.62Z"/><path class="cls-1" d="M1.52,1074.4l26,3.73c.78-11.55,2.24-23.1,2.25-34.66q.16-521,.07-1042H4.33q0,518.25-.12,1036.51C4.21,1050.09,2.45,1062.24,1.52,1074.4Z"/><path class="cls-1" d="M98.82,1069.76c7.67,13.55,16.63,13.46,26,8.88,1.56-14,4.46-28.08,4.48-42.13Q129.7,519,129.51,1.42H106.33q0,510.6,0,1021.2c0,8.08.85,16.73-.37,24.11C104.56,1055,101.27,1062.13,98.82,1069.76Z"/><path class="cls-2" d="M29.83,1.42q0,521-.07,1042.05c0,11.56-1.47,23.11-2.25,34.66l16.21-17.59c0-1.4,0-2.8-.09-4.2-.8-7.81-2.29-15.61-2.3-23.42q-.07-515.75.09-1031.5Z"/><path class="cls-2" d="M280.2,1.42c0,61.43.21,122.86-.16,184.28-.34,57-1.75,114-1.88,171-.08,37.41,1.76,74.82,1.9,112.24q.46,125.48,0,251c-.19,44.62-2.05,89.23-2,133.84.1,63,1.54,125.92,1.79,188.89,0,11.84-2.8,23.73-4.31,35.59,12.9-1,14-17.53,14-36.93q-.18-341.47-.08-682.95l0-356.9Z"/><path class="cls-2" d="M143.24,1061.07c0-1.58.11-3.17.16-4.76-1.48-11.49-4.24-23-4.25-34.47q-.43-510.21-.36-1020.42h-9.28q0,517.54-.19,1035.09c0,14-2.92,28.09-4.48,42.13Z"/><path class="cls-2" d="M94.67,1060.71c0-1.56,0-3.13.07-4.7-1.46-7.06-3.92-14-4.2-21.21-.63-16.81-.22-33.76-.23-50.65L90.1,1.42H80.83q0,520-.18,1040c0,12.44-3,24.88-4.55,37.32Z"/><path class="cls-2" d="M229.2,1.42q0,517.34-.23,1034.68c0,14.08-2.89,28.15-4.42,42.22l17.79-17.15a4.08,4.08,0,0,0,1.37-.54c-.22-1.42-.43-2.84-.65-4.26-1.54-9.94-4.43-19.89-4.43-29.84Q238.3,514,238.47,1.42Z"/><path class="cls-2" d="M180.52,1.42q0,517.45-.22,1034.91c0,14.08-2.84,28.15-4.36,42.22l18-17.68a3.33,3.33,0,0,0,1.32-.35c-.28-1.47-.54-3-.81-4.42-1.53-11.41-4.39-22.82-4.4-34.23q-.37-510.22-.23-1020.45Z"/><path class="cls-3" d="M150.3,1073.78c1.56-17.14,4.48-34.28,4.49-51.43q.42-510.47.22-1020.93H143.42l0,1054.9c-.05,1.58-.11,3.17-.16,4.75Z"/><path class="cls-3" d="M98.82,1069.76c2.45-7.63,5.74-14.76,7.11-23,1.22-7.38.37-16,.37-24.11q0-510.6,0-1021.2H94.74V1056c0,1.57,0,3.14-.07,4.7Q96.74,1065.24,98.82,1069.76Z"/><path class="cls-3" d="M43.63,1056.34c0,1.4.08,2.8.09,4.2l8.69,14.07c1-23.85,2.77-47.7,2.78-71.56q.29-500.82.14-1001.63H46.06q0,509.11-.1,1018.24C46,1031.89,44.44,1044.11,43.63,1056.34Z"/><path class="cls-3" d="M243.06,1056.37c.22,1.42.43,2.84.65,4.26,4.26,6,7.91,8,8.47-5.58.31-7.31.2-14.68.2-22V1.42h-9.27Q243.08,528.89,243.06,1056.37Z"/><path class="cls-3" d="M194.42,1056.1c.27,1.47.53,3,.81,4.42,4.42,6.73,7.76,7.41,8.31-5.74.24-5.84.17-11.74.17-17.61q0-517.88,0-1035.75h-9.28Z"/><path class="cls-4" d="M243.06,1056.37q0-527.47.05-1054.95h-4.64q0,512.55.16,1025.11C238.63,1036.48,241.52,1046.43,243.06,1056.37Z"/><path class="cls-4" d="M194.42,1056.1V1.42h-4.63q0,510.23.23,1020.45C190,1033.28,192.89,1044.69,194.42,1056.1Z"/><path class="cls-4" d="M138.79,1.42q.08,510.21.36,1020.42c0,11.5,2.77,23,4.25,34.47q0-527.44,0-1054.89Z"/><path class="cls-4" d="M90.1,1.42l.21,982.73c0,16.89-.4,33.84.23,50.65.28,7.22,2.74,14.15,4.2,21.21V1.42Z"/><path class="cls-4" d="M43.63,1056.34c.81-12.23,2.32-24.45,2.33-36.68q.18-509.11.1-1018.24H41.42q-.09,515.75-.09,1031.5C41.34,1040.73,42.83,1048.53,43.63,1056.34Z"/></g></g></svg>
         </ul>
     </nav>
 
     <main class="page-container">
-        
+        <section class="firstFacility-section">
+            <article class="first">
+             <img src="/assets/media/img/photomn.jpeg" alt="">
+            </article>
+ 
+             <article class="second">
+                 <header><h1>Vores Faciliteter</h1></header>
+                 <p>Vi kan teknisk set afvikle stort set alle typer arrangementer, og såfremt der er noget vi ikke har i huset, skaffer vi det manglende udstyr hos vores professionelle serviceleverandører. Kontakt os for nærmere information.</p>
+                 <p>Senior-Bio viser stadig film på analog 35mm film ved enkelte visninger, så nostalgien kan stadig få sin plads i det gode gamle "Biograf Theater".</p>
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 918.5"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polyline points="0 918 192 0 191.5 0.5 191.5 918.5 0.5 918.5"/></g></g></svg></section>
+
+         <section class="secondFacility-section">
+            <article class="first">
+             <img src="/assets/media/img/photomn.jpeg" alt="">
+            </article>
+ 
+             <article class="second">
+                 <header><h1>Seniorbio</h1></header>
+                 <p>Aktuelle premierefilm med en go' kop kaffe.</p>
+                 <p>Aktuelle premierefilm kan den første torsdag i hver måned opleves i hyggeligt samvær og serveret med kaffe i biografens foyer inden filmen. Ønsker du at modtage nyhedsbrev vedrørende seniorbio kan du tilmelde dig ved at ringe på nummeret 55 33 23 16, eller tilmelde dig digitalt ved at trykke på knappen under.</p>
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 918.5"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polyline points="0 918 192 0 191.5 0.5 191.5 918.5 0.5 918.5"/></g></g></svg></section>
+             </article>
+         </section>
+
+         <span class="newsletter-span">
+            <header><h2>TIlmelding Til Nyhedsbrev</h2></header>
+            <span>
+                <input type="text" placeholder="Indtast din mail her.." />
+                <button>TILMELD</button>
+            </span>
+        </span>
+
+         <section class="thirdFacility-section">
+            <article class="first">
+             <img src="/assets/media/img/photomn.jpeg" alt="">
+            </article>
+ 
+             <article class="second">
+                 <header><h1>Surprise Bio</h1></header>
+                 <p>Kom gratis i biografen og se en fantastisk og "hemmelig" kultklassiker. Følg med her på siden, og på IG: @ungpraesten, hvor filmens titel (måske) vil blive afsløret inden længe. Filmen er et must-see og den har relevans til en spændende studiekreds, som du kan deltage i i løbet af efteråret.</p>
+                 <p>Du må meget gerne dele denne begivenhed, og invitere dine venner med til en festlig, morsom, (og måske lidt uhyggelig), hyggelig filmaften i biografmørket</p>
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 918.5"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polyline points="0 918 192 0 191.5 0.5 191.5 918.5 0.5 918.5"/></g></g></svg></section>
+            </article>
+         </section>
     </main>
+
+    <section class="loginAndRegistration">
+        <form action="" method="POST" ></form>
+    </section>
 
     <footer class="page-footer"></footer>
 
     <script src="/assets/js/navigation.js"></script>
+    <script src="/assets/js/login.js"></script>
 </body>
 </html>

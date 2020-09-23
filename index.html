@@ -15,7 +15,7 @@
     <nav class="page-navigation">
         <img id="logo" src="/assets/media/svg/veubox.svg" alt="Vuebox-logo">
         <i id="burgerBar" class="fas fa-bars"></i>
-        <i id="logIn" class="fas fa-user-alt-slash"></i>
+        <i id="logIn" onclick="openForm(1)" class="fas fa-user-alt-slash"></i>
         
         <ul class="menu">
             <li class="listItem"><a href="/index.html">FORSIDE</a></li>
@@ -67,55 +67,31 @@
             </span>
         </span>
 
-        <section class="choosenMovies-section">
-            <div>
-                <figure>
-                    <img src="/assets/media/img/Poster-Riot.jpg" alt="">
-                    <figcaption>
-                        <h3>The Riot Club</h3>
-                        <p>Filmens varighed: 114 min</p>
-                    </figcaption>
-                </figure>
-                <button>Køb billet</button>
-            </div>
-            <div>
-                <figure>
-                    <img src="/assets/media/img/Poster-Riot.jpg" alt="">
-                    <figcaption>
-                        <h3>The Riot Club</h3>
-                        <p>Filmens varighed: 114 min</p>
-                    </figcaption>
-                </figure>
-                <button>Køb billet</button>
-            </div>
-            <div>
-                <figure>
-                    <img src="/assets/media/img/Poster-Riot.jpg" alt="">
-                    <figcaption>
-                        <h3>The Riot Club</h3>
-                        <p>Filmens varighed: 114 min</p>
-                    </figcaption>
-                </figure>
-                <button>Køb billet</button>
-            </div>
-            <div>
-                <figure>
-                    <img src="/assets/media/img/Poster-Riot.jpg" alt="">
-                    <figcaption>
-                        <h3>The Riot Club</h3>
-                        <p>Filmens varighed: 114 min</p>
-                    </figcaption>
-                </figure>
-                <button>Køb billet</button>
-            </div>
-        </section>
+        <section class="choosenMovies-section"></section>
+
         <span class="seeMore-span">
             <a href="/moviePage.html">Se flere film</a>
         </span>
     </main>
 
+    <section class="loginAndRegistration">
+        <form action="" method="POST" ></form>
+    </section>
+
+    <section class="movieInfo-container">
+        <article class="movieInfo">
+            <img id="moviePoster" src="" alt="" />
+            <h2 id="movieTitle">TITLE</h2>
+            <p id="movieDescription">DESCRIPTION</p>
+            <button class="infoButtons" type="button" style="background-color: #af0404;">KØB</button>
+            <button class="infoButtons" type="button" onclick="resetMovieChoice()">TILBAGE</button>
+        </article>
+    </section>
+
     <footer class="page-footer"></footer>
 
     <script src="/assets/js/navigation.js"></script>
+    <script src="/assets/js/login.js"></script>
+    <script src="/assets/js/frontPageMovieSelect.js"></script>
 </body>
 </html>

@@ -53,6 +53,7 @@ nav {
         color: white;
         font-size: 2em;
         right: 25%;
+        cursor: pointer;
 
         @media (min-width: $mediaLaptop) {
             font-size: 3em;
@@ -82,7 +83,7 @@ nav {
         }
 
         .listItem {
-            font-size: 1.2em;
+            font-size: 1.5em;
             padding: 10px;
             margin: 10px;
 
