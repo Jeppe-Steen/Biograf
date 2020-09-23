@@ -28,7 +28,7 @@ function setLocalStorage(i) {
     localStorage.setItem("movieTitle", movieArray[i].movieTitle);
     localStorage.setItem("movieDescription", movieArray[i].movieDescription);
     localStorage.setItem("moviePoster", movieArray[i].moviePoster);
-    localStorage.setItem("movieTime", movieArray[i].movieTime)
+    localStorage.setItem("movieTime", movieArray[i].movieTime);
 };
 
 function selectedMovies(n) {
