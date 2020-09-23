@@ -1,0 +1,112 @@
+.loginAndRegistration {
+    position: fixed;
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100vh; 
+    z-index: 9990; 
+    backdrop-filter: blur(4px); 
+    display: none;
+
+    &.loginAndRegistrationActive {
+        display: flex;
+    }
+
+    form {
+        width: 90%; 
+        height: 90%; 
+        background-color: #252525; 
+        position: absolute; 
+        left: 50%; 
+        top: 50%; 
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transform: translate(-50%, -50%); 
+        padding: 0 0; 
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+
+        @media (min-width: 1200px) {
+            width: 30%; 
+            height: 70%;
+            padding: 2% 0; 
+        }
+        
+        .buttons {
+            width: 100%;
+            height: fit-content; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+
+            a {
+                width: 50%;
+                padding: 30px;
+                background-color: #ffffff06;
+                text-align: center;
+                color: white;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+
+                @media (min-width: 1200px) {
+                    width: 40%;
+                    padding: 30px;
+                }
+
+                &:hover {
+                    background-color: #af0404;
+                }
+            }
+        }
+
+        input {
+            width: 90%;
+            padding: 20px;
+            margin-top: 5%;
+            background-color: #ffffff06;
+            border: none;
+            color: white;
+
+            @media (min-width: 1200px) {
+                width: 60%;
+            }
+
+            &::placeholder {
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                color: white;
+            }
+        }
+
+        button {
+            width: 50%;
+            height: fit-content;
+            padding: 20px;
+            color: white;
+            text-transform: uppercase;
+            border: none;
+            background-color: #00000030;
+            margin-top: 5%;
+            letter-spacing: 3px;
+
+            &:hover {
+                background-color: #AF0404; 
+            }
+        }
+
+        #closeSection {
+            color: white;
+            position: absolute;
+            right: -0.3em;
+            top: -0.45em;
+            font-size: 3em;
+            z-index: 9991;
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+    }
+}
