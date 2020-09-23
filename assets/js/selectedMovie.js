@@ -14,9 +14,12 @@ let seniorTickets = document.querySelector("#seniorTickets");
 let amountOftTickets = document.querySelector("#amountOfTickets");
 let ticketPrice = document.querySelector("#ticketPrice");
 
+localStorage.setItem("amountOfTickets", 0);
+
 function checkAmountAndPrice() {
     amountOftTickets.innerHTML = parseInt(normalTickets.value) + parseInt(childrenTickets.value) + parseInt(seniorTickets.value); 
     ticketPrice.innerHTML = parseInt(normalTickets.value * normalTicketPrice) + parseInt(childrenTickets.value * childrenTicketPrice) + parseInt(seniorTickets.value * seniorTicketPrice);
+    localStorage.setItem("amountOfTickets", parseInt(normalTickets.value) + parseInt(childrenTickets.value) + parseInt(seniorTickets.value));
 }
 
 normalTickets.addEventListener("change", (e) => {
@@ -29,4 +32,32 @@ childrenTickets.addEventListener("change", (e) => {
 
 seniorTickets.addEventListener("change", (e) => {
     checkAmountAndPrice();
+});
+
+//dette er for at bruge sædevalg
+
+const container = document.querySelector(".selectSeats");
+const seats = document.querySelectorAll(".row .seat");
+
+localStorage.setItem("selectedSeats", "none");
+
+
+function updateSelectedCount() {
+    let selectedSeats = document.querySelectorAll(".row .seat.selected");
+    let seatIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat) + 1);
+
+    localStorage.setItem("selectedSeats", seatIndex);
+};
+
+
+container.addEventListener("click", (e) => {
+    if(localStorage.getItem("amountOfTickets") > 0) {
+        if(e.target.classList.contains("seat") && !e.target.classList.contains("occupied")) {
+            e.target.classList.toggle("selected");
+
+            updateSelectedCount();
+        };
+    } else if(!localStorage.getItem("amountOfTickets") === localStorage.getItem("selectedSeats").lenght) {
+        return;
+    };
 });
