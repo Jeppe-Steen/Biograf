@@ -1,9 +1,9 @@
 let movieArray =
 [
-    {number: 0, movieTitle: "joker", movieDescription: "description", moviePoster: "joker.jpg", movieTime: 110},
-    {number: 1, movieTitle: "moonlight", movieDescription: "description", moviePoster: "moonlight.jpg", movieTime: 120},
-    {number: 2, movieTitle: "alien", movieDescription: "description", moviePoster: "alien.jpg", movieTime: 130},
-    {number: 3, movieTitle: "riot", movieDescription: "description", moviePoster: "Riot.jpg", movieTime: 140}
+    {number: 0, movieTitle: "joker", movieDescription: "description", moviePoster: "joker.jpg", movieLength: 110},
+    {number: 1, movieTitle: "moonlight", movieDescription: "description", moviePoster: "moonlight.jpg", movieLength: 120},
+    {number: 2, movieTitle: "alien", movieDescription: "description", moviePoster: "alien.jpg", movieLength: 130},
+    {number: 3, movieTitle: "riot", movieDescription: "description", moviePoster: "Riot.jpg", movieLength: 140}
 ];
 
 let movieElement, movies = "";
@@ -14,7 +14,7 @@ for (movieElement of movieArray) {
                         <img src="/assets/media/img/posters/${movieElement.moviePoster}" />
                         <figcaption>
                             <h3>${movieElement.movieTitle}</h3>
-                            <p>Filmens varighed: ${movieElement.movieTime} min</p>
+                            <p>Filmens varighed: ${movieElement.movieLength} min</p>
                         </figcaption>
                     </figure>
                     <button type="button" onclick="selectedMovies(${movieElement.number})">Læs mere</button>
@@ -28,7 +28,7 @@ function setLocalStorage(i) {
     localStorage.setItem("movieTitle", movieArray[i].movieTitle);
     localStorage.setItem("movieDescription", movieArray[i].movieDescription);
     localStorage.setItem("moviePoster", movieArray[i].moviePoster);
-    localStorage.setItem("movieTime", movieArray[i].movieTime)
+    localStorage.setItem("movieLength", movieArray[i].movieLength)
 };
 
 function selectedMovies(n) {
