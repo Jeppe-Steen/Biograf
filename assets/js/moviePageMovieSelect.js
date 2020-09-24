@@ -58,10 +58,10 @@ function resetMovieChoice() {
 }
 
 let genre = document.querySelector("#genre");
-let genreValue = genre.value;
 
 let filter = [...document.querySelectorAll(".filter")];
 let filterAction = [...document.querySelectorAll(".action")];
+
 let filterHorror = [...document.querySelectorAll(".horror")];
 let filterScifi = [...document.querySelectorAll(".sci-fi")];
 let filterKrimi = [...document.querySelectorAll(".krimi")];
