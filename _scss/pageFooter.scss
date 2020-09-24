@@ -31,9 +31,48 @@
         height: 70vh; //skal ændred
         background-color: #af0404;
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         @media (min-width: 1200px) {
             height: 100%; 
+        }
+
+        article {
+            width: 80%;
+            height: 80%;
+            display: flex;
+            flex-wrap: no-wrap;
+            flex-direction: column;
+
+            @media (min-width: 1200px) {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            span {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: 25%;
+                width: 100%;
+                padding: 2%;
+
+                @media (min-width: 1200px) {
+                    height: 50%;
+                    width: 50%;
+                }
+    
+                img {
+                    height: 60px;
+                }
+                p {
+                    color: white;
+                    margin-left: 5%;
+                    font-size: 18px;
+                }
+            }
         }
 
         svg {
