@@ -1,12 +1,12 @@
 let movieArray = [
-  { number: 0, movieTitle: "joker", movieDescription: "description", moviePoster: "joker.jpg", movieLength: 110, movieGenre: "filter krimi thriller" },
-  { number: 1, movieTitle: "moonlight", movieDescription: "description", moviePoster: "moonlight.jpg", movieLength: 120, movieGenre: "filter drama thriller" },
-  { number: 2, movieTitle: "alien", movieDescription: "description", moviePoster: "alien.jpg", movieLength: 130, movieGenre: "filter sci-fi horror" },
-  { number: 3, movieTitle: "riot", movieDescription: "description", moviePoster: "Riot.jpg",movieLength: 140, movieGenre: "filter action" },
-  { number: 4, movieTitle: "Citizen four", movieDescription: "description", moviePoster: "Citizenfour.jpg", movieLength: 150, movieGenre: "filter dokumentar" },
-  { number: 5, movieTitle: "Trash", movieDescription: "description", moviePoster: "Trash.jpg", movieLength: 160, movieGenre: "filter thriller horror" },
-  { number: 6, movieTitle: "Paddington", movieDescription: "description", moviePoster: "paddington.jpg", movieLength: 170, movieGenre: "filter børnefilm horror" }, 
-  { number: 7, movieTitle: "The Boy", movieDescription: "description", moviePoster: "theboy.jpg", movieLength: 180, movieGenre: "filter horror action" },
+  { number: 0, movieTitle: "joker", movieDescription: "description", moviePoster: "joker.jpg", movieLength: 110, moviePrice: [100, 50, 50], movieGenre: "filter krimi thriller" },
+  { number: 1, movieTitle: "moonlight", movieDescription: "description", moviePoster: "moonlight.jpg", movieLength: 120, moviePrice: [100, 50, 50], movieGenre: "filter drama thriller" },
+  { number: 2, movieTitle: "alien", movieDescription: "description", moviePoster: "alien.jpg", movieLength: 130, moviePrice: [100, 50, 50], movieGenre: "filter sci-fi horror" },
+  { number: 3, movieTitle: "riot", movieDescription: "description", moviePoster: "Riot.jpg",movieLength: 140, moviePrice: [100, 50, 50], movieGenre: "filter action" },
+  { number: 4, movieTitle: "Citizen four", movieDescription: "description", moviePoster: "Citizenfour.jpg", movieLength: 150, moviePrice: [100, 50, 50], movieGenre: "filter dokumentar" },
+  { number: 5, movieTitle: "Trash", movieDescription: "description", moviePoster: "Trash.jpg", movieLength: 160, moviePrice: [100, 50, 50], movieGenre: "filter thriller horror" },
+  { number: 6, movieTitle: "Paddington", movieDescription: "description", moviePoster: "paddington.jpg", movieLength: 170, moviePrice: [100, 50, 50], movieGenre: "filter børnefilm horror" }, 
+  { number: 7, movieTitle: "The Boy", movieDescription: "description", moviePoster: "theboy.jpg", movieLength: 180, moviePrice: [100, 50, 50], movieGenre: "filter horror action" },
 ];
 
 let movieElement,
@@ -33,6 +33,7 @@ function setLocalStorage(i) {
   localStorage.setItem("movieDescription", movieArray[i].movieDescription);
   localStorage.setItem("moviePoster", movieArray[i].moviePoster);
   localStorage.setItem("movieLength", movieArray[i].movieLength);
+  localStorage.setItem("moviePrice" , movieArray[i].movieOrice);
 }
 
 function selectedMovies(n) {
