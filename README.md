@@ -12,3 +12,20 @@ Projektet består af:
   - Tak side
   
     - Kontakt siden ligger som footer på alle siderne. 
+    
+ For at holde styr på projektet og gruppearbejdet har gruppen brugt SCRUM og KANBAN.
+ 
+ Jeppe har lavet:
+  - Navigation (responsive)
+  - Forside (responsive)
+  - login / registration popup (responsive)
+  - Booking (responsive)
+  - Om filmene popup (responsive)
+  - Faciliteter (responsive)
+  - Nyhedsbrev validering 
+ 
+ Niklas har lavet:
+  - Pagefooter (responsive)
+  - Film side (responsive)
+  - Film filter (responsive)
+  - Tak siden (responsive)
