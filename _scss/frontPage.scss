@@ -71,7 +71,7 @@ $greyColor: #252525;
                     font-size: 2em;
 
                     @media (min-width: 1200px) {
-                        font-size: 2.5em;
+                        font-size: 3em;
                     }
                 }
             }
@@ -83,7 +83,7 @@ $greyColor: #252525;
 
                 @media (min-width: 1200px) {
                     padding: 1% 0;
-                    font-size: 1em;
+                    font-size: 1.5em;
                 }
             }
 
@@ -137,7 +137,7 @@ $greyColor: #252525;
                     font-size: 2em;
 
                     @media (min-width: 1200px) {
-                        font-size: 2.5em;
+                        font-size: 3em;
                     }
                 }
             }
@@ -149,7 +149,7 @@ $greyColor: #252525;
 
                 @media (min-width: 1200px) {
                     padding: 1% 0;
-                    font-size: 1em;
+                    font-size: 1.5em;
                 }
             }
         }
@@ -226,7 +226,7 @@ $greyColor: #252525;
             }
         }
 
-        span {
+        form {
             width: 80%;
             height: auto;
             display: flex;
@@ -286,6 +286,7 @@ $greyColor: #252525;
         @media (min-width: 1200px) {
             height: auto;
             background-color: $greyColor;
+            padding: 7% 10%;
     
             display: grid;
             grid-template: auto / 1fr 1fr 1fr 1fr;
@@ -340,10 +341,18 @@ $greyColor: #252525;
 
                     h3 {
                         font-size: 1.5em;
+
+                        @media (min-width: 1200px) {
+                            font-size: 2.5em;
+                        }
                     }
 
                     p {
                         font-size: .5em;
+
+                        @media (min-width: 1200px) {
+                            font-size: 1em;
+                        }
                     }
                 }
 
@@ -368,7 +377,8 @@ $greyColor: #252525;
                 z-index: 1;
 
                 @media (min-width: 1200px) {
-                    margin-top: -5px
+                    margin-top: -5px;
+                    font-size: 25px;
                 }
 
                 &:hover {
@@ -405,6 +415,7 @@ $greyColor: #252525;
 
             @media (min-width: 1200px) {
                 width: 15vw;
+                font-size: 25px;
             }
 
             &:hover {
@@ -471,6 +482,11 @@ $greyColor: #252525;
             color: white;
             text-transform: uppercase;
             letter-spacing: 3px;
+            font-size: 12px;
+
+            @media (min-width: 1200px) {
+                font-size: 25px;
+            }
         }
     }
 }

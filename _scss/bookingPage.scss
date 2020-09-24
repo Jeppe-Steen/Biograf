@@ -125,6 +125,10 @@ $greyColor: #252525;
                     @media (min-width: 1200px) {
                         padding: 20px;
                     }
+
+                    &::placeholder {
+                        color: white;
+                    }
                 }
             }
         }

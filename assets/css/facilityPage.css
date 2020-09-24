@@ -306,7 +306,7 @@
   }
 }
 
-.page-container .newsletter-span span {
+.page-container .newsletter-span form {
   width: 80%;
   height: auto;
   display: -webkit-box;
@@ -326,13 +326,13 @@
 }
 
 @media (min-width: 1200px) {
-  .page-container .newsletter-span span {
+  .page-container .newsletter-span form {
     width: 30%;
     padding: 0 0 2.5% 0;
   }
 }
 
-.page-container .newsletter-span span input {
+.page-container .newsletter-span form input {
   width: 70%;
   padding: 10px 20px;
   border: none;
@@ -341,13 +341,13 @@
 }
 
 @media (min-width: 1200px) {
-  .page-container .newsletter-span span input {
+  .page-container .newsletter-span form input {
     padding: 20px 30px;
     font-size: 1.2em;
   }
 }
 
-.page-container .newsletter-span span button {
+.page-container .newsletter-span form button {
   width: 30%;
   padding: 10px;
   border: none;
@@ -358,13 +358,13 @@
 }
 
 @media (min-width: 1200px) {
-  .page-container .newsletter-span span button {
+  .page-container .newsletter-span form button {
     padding: 20px 10px;
     font-size: 1.2em;
   }
 }
 
-.page-container .newsletter-span span button:hover {
+.page-container .newsletter-span form button:hover {
   cursor: pointer;
 }
 

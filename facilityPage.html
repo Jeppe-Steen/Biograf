@@ -55,10 +55,10 @@
 
          <span class="newsletter-span">
             <header><h2>TIlmelding Til Nyhedsbrev</h2></header>
-            <span>
-                <input type="text" placeholder="Indtast din mail her.." />
-                <button>TILMELD</button>
-            </span>
+            <form method="POST">
+                <input type="text" placeholder="Indtast din mail her.." id="emailInput" />
+                <button type="button" onclick="validateEmail(this.form)">TILMELD</button>
+            </form>
         </span>
 
          <section class="thirdFacility-section">
@@ -83,5 +83,6 @@
 
     <script src="/assets/js/navigation.js"></script>
     <script src="/assets/js/login.js"></script>
+    <script src="/assets/js/validateEmail.js"></script>
 </body>
 </html>

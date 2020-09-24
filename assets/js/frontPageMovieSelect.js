@@ -3,7 +3,7 @@ let movieArray = //dette er arrayet som indeholder filmene
     {number: 0, movieTitle: "joker", movieDescription: "description", moviePoster: "joker.jpg", movieLength: 110, moviePrice: [80, 50, 60]},
     {number: 1, movieTitle: "moonlight", movieDescription: "description", moviePoster: "moonlight.jpg", movieLength: 120, moviePrice: [100, 60, 70]},
     {number: 2, movieTitle: "alien", movieDescription: "description", moviePoster: "alien.jpg", movieLength: 130, moviePrice: [80, 50, 60]},
-    {number: 3, movieTitle: "riot", movieDescription: "description", moviePoster: "Riot.jpg", movieLength: 140, moviePrice: [80, 50, 60]}
+    {number: 3, movieTitle: "the riot club", movieDescription: "description", moviePoster: "Riot.jpg", movieLength: 140, moviePrice: [80, 50, 60]}
 ];
 
 let movieElement, movies = "";

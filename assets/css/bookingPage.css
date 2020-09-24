@@ -178,6 +178,22 @@
   }
 }
 
+.page-container .grid-container .selectTickets .chooseTickets input::-webkit-input-placeholder {
+  color: white;
+}
+
+.page-container .grid-container .selectTickets .chooseTickets input:-ms-input-placeholder {
+  color: white;
+}
+
+.page-container .grid-container .selectTickets .chooseTickets input::-ms-input-placeholder {
+  color: white;
+}
+
+.page-container .grid-container .selectTickets .chooseTickets input::placeholder {
+  color: white;
+}
+
 .page-container .grid-container .buyTickets {
   -ms-grid-row: 3;
   -ms-grid-column: 1;

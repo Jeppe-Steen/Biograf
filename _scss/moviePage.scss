@@ -28,7 +28,7 @@
         -moz-appearance: none;
         -webkit-appearance: none;
         appearance: none;
-        font-size: 16px;
+        font-size: 30px;
         background-color: #af0404;
         border: none;
         color: white;
@@ -43,7 +43,7 @@
 
     .film-gallery {
       display: grid;
-      padding: 0px 10% 5% 10%;
+      padding: 5% 10% 5% 10%;
       grid-gap: 150px 50px;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: auto;
@@ -59,7 +59,7 @@
         flex-direction: column;
         height: 400px;
         width: auto;
-        margin-top: 50px;
+        margin: 20% 0;
 
         figure {
           position: relative;
@@ -84,13 +84,17 @@
             width: 100%;
             top: 0;
             left: 0;
-            font-size: 1.5em;
             text-transform: uppercase;
             color: #fff;
             visibility: hidden;
             letter-spacing: 2px;
+
+            h3 {
+              font-size: 2.5em;
+            }
+
             p {
-              font-size: 0.5em;
+              font-size: 1em;
             }
           }
 
@@ -113,7 +117,7 @@
           border: none;
           color: white;
           text-transform: uppercase;
-          font-size: 16px;
+          font-size: 25px;
           letter-spacing: 3px;
           z-index: 1;
 
@@ -213,7 +217,7 @@
             visibility: hidden;
 
             h3 {
-              font-size: 1.1em;
+              font-size: 1.5em;
             }
 
             p {

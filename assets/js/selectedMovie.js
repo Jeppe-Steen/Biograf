@@ -35,7 +35,6 @@ seniorTickets.addEventListener("change", (e) => {
 });
 
 //dette er for at bruge sædevalg
-
 const container = document.querySelector(".selectSeats");
 const seats = document.querySelectorAll(".row .seat");
 
@@ -44,22 +43,14 @@ let seatIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat) + 1);
 
 localStorage.setItem("selectedSeats", JSON.stringify(seatIndex));
 
-
-// function updateSelectedCount() {
-//     let selectedSeats = document.querySelectorAll(".row .seat.selected");
-//     let seatIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat) + 1);
-
-//     localStorage.setItem("selectedSeats", JSON.stringify(seatIndex));
-
-//     // console.log(JSON.parse(localStorage.getItem("selectedSeats")).length);
-// };
+let test = seatIndex.length;
+console.log(test);
 
 
 container.addEventListener("click", (e) => {
-    let test = JSON.parse(localStorage.getItem("selectedSeats")).length;
 
     if(localStorage.getItem("amountOfTickets") > 0) {
-        if(localStorage.getItem("amountOfTickets") >= test) {
+        if(test < parseInt(localStorage.getItem("amountOfTickets"))) {
             if(e.target.classList.contains("seat") && !e.target.classList.contains("occupied")) {
                 e.target.classList.toggle("selected");
 
@@ -68,11 +59,14 @@ container.addEventListener("click", (e) => {
 
                 localStorage.setItem("selectedSeats", JSON.stringify(seatIndex));
 
-                console.log(localStorage.getItem("amountOfTickets"));
-                console.log(JSON.parse(localStorage.getItem("selectedSeats")).length);
+                test = seatIndex.length;
             };
         };
     };
 });
 
-// if(localStorage.getItem("selectedSeats").length <= localStorage.getItem("amountOfTickets")) {
+function buyTickets() {
+    if(test == parseInt(localStorage.getItem("amountOfTickets")) && localStorage.getItem("amountOfTickets") > 0) {
+        window.location.href='thankYouPage.html';
+    };
+};

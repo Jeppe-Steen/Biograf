@@ -97,7 +97,7 @@
 
 @media (min-width: 1200px) {
   .page-container .hero-section .second header h1 {
-    font-size: 2.5em;
+    font-size: 3em;
   }
 }
 
@@ -110,7 +110,7 @@
 @media (min-width: 1200px) {
   .page-container .hero-section .second p {
     padding: 1% 0;
-    font-size: 1em;
+    font-size: 1.5em;
   }
 }
 
@@ -199,7 +199,7 @@
 
 @media (min-width: 1200px) {
   .page-container .about-section .first header h2 {
-    font-size: 2.5em;
+    font-size: 3em;
   }
 }
 
@@ -212,7 +212,7 @@
 @media (min-width: 1200px) {
   .page-container .about-section .first p {
     padding: 1% 0;
-    font-size: 1em;
+    font-size: 1.5em;
   }
 }
 
@@ -320,7 +320,7 @@
   }
 }
 
-.page-container .newsletter-span span {
+.page-container .newsletter-span form {
   width: 80%;
   height: auto;
   display: -webkit-box;
@@ -340,13 +340,13 @@
 }
 
 @media (min-width: 1200px) {
-  .page-container .newsletter-span span {
+  .page-container .newsletter-span form {
     width: 30%;
     padding: 0 0 2.5% 0;
   }
 }
 
-.page-container .newsletter-span span input {
+.page-container .newsletter-span form input {
   width: 70%;
   padding: 10px 20px;
   border: none;
@@ -355,13 +355,13 @@
 }
 
 @media (min-width: 1200px) {
-  .page-container .newsletter-span span input {
+  .page-container .newsletter-span form input {
     padding: 20px 30px;
     font-size: 1.2em;
   }
 }
 
-.page-container .newsletter-span span button {
+.page-container .newsletter-span form button {
   width: 30%;
   padding: 10px;
   border: none;
@@ -372,13 +372,13 @@
 }
 
 @media (min-width: 1200px) {
-  .page-container .newsletter-span span button {
+  .page-container .newsletter-span form button {
     padding: 20px 10px;
     font-size: 1.2em;
   }
 }
 
-.page-container .newsletter-span span button:hover {
+.page-container .newsletter-span form button:hover {
   cursor: pointer;
 }
 
@@ -405,6 +405,7 @@
   .page-container .choosenMovies-section {
     height: auto;
     background-color: #252525;
+    padding: 7% 10%;
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: auto;
@@ -486,8 +487,20 @@
   font-size: 1.5em;
 }
 
+@media (min-width: 1200px) {
+  .page-container .choosenMovies-section article figure figcaption h3 {
+    font-size: 2.5em;
+  }
+}
+
 .page-container .choosenMovies-section article figure figcaption p {
   font-size: .5em;
+}
+
+@media (min-width: 1200px) {
+  .page-container .choosenMovies-section article figure figcaption p {
+    font-size: 1em;
+  }
 }
 
 .page-container .choosenMovies-section article figure:hover figcaption {
@@ -511,6 +524,7 @@
 @media (min-width: 1200px) {
   .page-container .choosenMovies-section article button {
     margin-top: -5px;
+    font-size: 25px;
   }
 }
 
@@ -557,6 +571,7 @@
 @media (min-width: 1200px) {
   .page-container .seeMore-span a {
     width: 15vw;
+    font-size: 25px;
   }
 }
 
@@ -642,4 +657,11 @@
   color: white;
   text-transform: uppercase;
   letter-spacing: 3px;
+  font-size: 12px;
+}
+
+@media (min-width: 1200px) {
+  .movieInfo-container .movieInfo .infoButtons {
+    font-size: 25px;
+  }
 }
