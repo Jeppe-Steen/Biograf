@@ -1,0 +1,70 @@
+.page-footer {
+  width: 100%;
+  height: 50vh;
+  background-color: yellow;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: 100% 100%;
+      grid-template: auto / 100% 100%;
+      grid-template-areas: "icons" "map";
+}
+
+@media (min-width: 1200px) {
+  .page-footer {
+    height: 50%;
+    -ms-grid-rows: 100%;
+    -ms-grid-columns: 45% 55%;
+        grid-template: 100% / 45% 55%;
+        grid-template-areas: "map icons";
+  }
+}
+
+.page-footer iframe {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: map;
+  width: 100%;
+  height: 50vh;
+  background-color: green;
+}
+
+@media (min-width: 1200px) {
+  .page-footer iframe {
+    height: 100%;
+  }
+}
+
+.page-footer section {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: icons;
+  width: 100%;
+  height: 70vh;
+  background-color: #af0404;
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .page-footer section {
+    height: 100%;
+  }
+}
+
+.page-footer section svg {
+  display: none;
+  position: absolute;
+}
+
+@media (min-width: 1200px) {
+  .page-footer section svg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    bottom: 0;
+    right: 100%;
+    -webkit-filter: drop-shadow(-10px 0px 5px #00000030);
+            filter: drop-shadow(-10px 0px 5px #00000030);
+  }
+}

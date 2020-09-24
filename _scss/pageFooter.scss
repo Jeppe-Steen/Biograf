@@ -1,0 +1,52 @@
+.page-footer {
+    width: 100%;
+    height: 50vh; //skal ændres
+    background-color: yellow;
+    display: grid;
+    grid-template: auto / 100% 100%;
+    grid-template-areas: 
+    "icons"
+    "map";
+
+    @media (min-width: 1200px) {
+        height: 50%;
+        grid-template: 100% / 45% 55%;
+        grid-template-areas: "map icons";
+    }
+
+    iframe {
+        grid-area: map;
+        width: 100%;
+        height: 50vh; //skal ændres
+        background-color: green;
+
+        @media (min-width: 1200px) {
+            height: 100%;
+        }
+    }
+
+    section {
+        grid-area: icons;
+        width: 100%;
+        height: 70vh; //skal ændred
+        background-color: #af0404;
+        position: relative;
+
+        @media (min-width: 1200px) {
+            height: 100%; 
+        }
+
+        svg {
+            display: none;
+            position: absolute;
+            
+            @media (min-width: 1200px) {
+                display: flex;
+                height: 100%;
+                bottom: 0;
+                right: 100%;
+                filter: drop-shadow(-10px 0px 5px #00000030);
+            }
+        }
+    }
+}
