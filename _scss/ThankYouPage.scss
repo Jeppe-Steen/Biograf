@@ -1,87 +1,63 @@
-@media (min-width: 1200px) {
-.content {
-    margin: 0 auto;
-    margin-top: 300px;
-    text-align: center;
-    width: 50%;
+.page-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #252525;
 
-     h1 {
-        text-align: center;
-        color: white;
-        margin-top: 150px;
-        font-size: 72px;
-        font-weight: bolder;
-    }
-
-     p {
-        text-align: center;
-        color: white;
-        margin-top: 50px;
-        font-weight: bolder;
-        font-size: 18px;
-    }
-
-    .btn-thank {
-        position: absolute;
-        margin-top: 110px;
-        border: none;
-        border: 3.5px solid #af0404;
-        border-radius: 13px;
-        padding: 5px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        left: 46.5%;
-        bottom: 20%;
-        font-size: 14px;
-        cursor: pointer;
-    } 
-}
-}
-
-@media (max-width: 1199px) {
     .content {
-        margin: 0 auto;
-        margin-top: 200px;
         text-align: center;
-        width: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15vh;
 
-        h1 {
-            text-align: center;
-            color: white;
-            margin-bottom: 50px;
-            margin-top: 225px;
-            font-size: 35px;
-            font-weight: bolder;
+        @media (min-width: 1200px) {
+            height: 80vh;
+            margin-top: 10vh;
+            justify-content: center;
         }
-        
+
+        header {
+            width: 80%;
+            height: fit-content;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            color: white;
+            letter-spacing: 3px;
+
+            @media (min-width: 1200px) {
+                width: 60%;
+            }
+        }
+
         p {
-            text-align: center;
+            width: 80%;
+            font-size: 1em;
+            padding: 20px 0;
             color: white;
-            font-size: 14px;
-            width: 90%;
-            margin: 0 auto;
+
+            @media (min-width: 1200px) {
+                width: 60%;
+            }
         }
-          
-    .btn-thank {
-        position: absolute;
-        margin-top: 110px;
-        border: none;
-        border: 3.5px solid #af0404;
-        border-radius: 20px;
-        padding: 5px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        left: 35%;
-        bottom: 10%;
-        cursor: pointer;
-        } 
-    }
-    p {
-        position: absolute;
-        text-align: left;
-        color: white;
-        font-size: 14px;
-        left: 5%;
-        width: 90%;
+
+        button {
+          margin: 20px 0 40px 0;
+          padding: 20px;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          color: white;
+          border: none;
+          background-color: #af0404;
+
+          &:hover {
+              transform: scale(1.1);
+              cursor: pointer;
+          }
+        }
     }
 }
