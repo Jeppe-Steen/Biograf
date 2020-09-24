@@ -53,12 +53,16 @@
 
       article {
         position: relative;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         height: 400px;
         width: auto;
+
+        &.show{
+          display: flex; 
+        }
 
         figure {
           position: relative;
@@ -180,13 +184,17 @@
       padding: 0px 10% 5% 10%;
 
       article {
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         height: fit-content;
         width: 280px;
         margin-top: 15px;
+
+        &.show{
+          display: flex; 
+        }
 
         figure {
           position: relative;

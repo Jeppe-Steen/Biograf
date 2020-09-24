@@ -65,9 +65,7 @@
   }
   .page-container .film-gallery article {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -80,6 +78,11 @@
             flex-direction: column;
     height: 400px;
     width: auto;
+  }
+  .page-container .film-gallery article.show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .page-container .film-gallery article figure {
     position: relative;
@@ -227,9 +230,7 @@
     padding: 0px 10% 5% 10%;
   }
   .page-container .film-gallery article {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -245,6 +246,11 @@
     height: fit-content;
     width: 280px;
     margin-top: 15px;
+  }
+  .page-container .film-gallery article.show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .page-container .film-gallery article figure {
     position: relative;
