@@ -33,7 +33,7 @@ function setLocalStorage(i) {
   localStorage.setItem("movieDescription", movieArray[i].movieDescription);
   localStorage.setItem("moviePoster", movieArray[i].moviePoster);
   localStorage.setItem("movieLength", movieArray[i].movieLength);
-  localStorage.setItem("moviePrice" , movieArray[i].moviePrice);
+  localStorage.setItem("moviePrice", JSON.stringify(movieArray[i].moviePrice));
 }
 
 function selectedMovies(n) {
